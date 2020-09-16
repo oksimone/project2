@@ -9,7 +9,7 @@ $(document).ready(() => {
       id: 28
     },
     {
-      name: "Actin & Adventure",
+      name: "Action & Adventure",
       id: 10759
     },
     {
