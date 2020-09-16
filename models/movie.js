@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   const Movie = sequelize.define("Movie", {
     // The title will be grabbed from the api's original_title
     title: {
@@ -19,8 +19,8 @@ module.exports = function (sequelize, DataTypes) {
     },
     //The main genre name and id will be grabbed from the api
     genre: {
-        name: DataTypes.STRING,
-        id: DataTypes.INTEGER
+      name: DataTypes.STRING,
+      id: DataTypes.INTEGER
     }
   });
   return Movie;
