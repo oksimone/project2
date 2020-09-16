@@ -17,11 +17,25 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       default: false
     },
+    //This determines if the movie has been added to the watch list
+    onPlaylist: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      default: false
+    },
     //The main genre name and id will be grabbed from the api
     genre: {
-      name: DataTypes.STRING,
-      id: DataTypes.INTEGER
+      type: DataTypes.STRING
     }
   });
+
+  //Grab the user login info, just the email, to reference with foreign key
+  Movie.associate = models => {
+    Movie.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Movie;
 };
