@@ -2,3 +2,131 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.results {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3,
+.bgimg-4,
+.bgimg-5,
+.bgimg-6,
+.bgimg-7,
+.bgimg-8,
+.bgimg-9,
+.bgimg-10,
+.bgimg-11,
+.bgimg-12 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bgimg-1 {
+  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  min-height: 650px;
+}
+
+.bgimg-2 {
+  background-image: url("https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg");
+  min-height: 550px;
+}
+
+.bgimg-3 {
+  background-image: url("https://wegotthiscovered.com/wp-content/uploads/2020/07/Avengers-Endgame-Captain-America.jpg");
+  min-height: 550px;
+}
+
+.bgimg-4 {
+  background-image: url("http://image.tmdb.org/t/p/original/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg");
+  min-height: 550px;
+}
+
+.bgimg-5 {
+  background-image: url("http://image.tmdb.org/t/p/original//86L8wqGMDbwURPni2t7FQ0nDjsH.jpg");
+  min-height: 550px;
+}
+
+.bgimg-6 {
+  background-image: url("http://image.tmdb.org/t/p/original/pq0JSpwyT2URytdFG0euztQPAyR.jpg");
+  min-height: 550px;
+}
+
+.bgimg-7 {
+  background-image: url("http://image.tmdb.org/t/p/original/dbOqWLNWg1Xphshyus0UMSN8fFP.jpg");
+  min-height: 550px;
+}
+
+.bgimg-8 {
+  background-image: url("http://image.tmdb.org/t/p/original/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg");
+  min-height: 550px;
+}
+
+.bgimg-9 {
+  background-image: url("http://image.tmdb.org/t/p/original/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg");
+  min-height: 550px;
+}
+
+.bgimg-10 {
+  background-image: url("http://image.tmdb.org/t/p/original/7fvdg211A2L0mHddvzyArRuRalp.jpg");
+  min-height: 550px;
+}
+
+.bgimg-11 {
+  background-image: url("https://wallpapercave.com/wp/wp1869876.jpg");
+  min-height: 550px;
+}
+
+.bgimg-12 {
+  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  min-height: 600px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.movieTitle {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #fff;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3,
+  .bgimg-4,
+  .bgimg-5,
+  .bgimg-6,
+  .bgimg-7,
+  .bgimg-8,
+  .bgimg-9,
+  .bgimg-10,
+  .bgimg-11,
+  .bgimg-12 {
+    background-attachment: scroll;
+  }
+}
