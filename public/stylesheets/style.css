@@ -2,3 +2,12 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+#secondpage{
+  font-size: 12vw;
+  white-space: nowrap;
+  margin-top: 80%;
+  
+}
+
+
