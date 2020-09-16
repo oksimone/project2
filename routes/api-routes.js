@@ -56,8 +56,9 @@ module.exports = function(app) {
     const queryURL =
       "https://api.themoviedb.org/3/discover/movie?api_key=" +
       process.env.MOVIEDB_KEY +
-      "&language=en-US&with_genre=" +
+      "&language=en-US&with_genres=" +
       req.params.genre;
+    console.log(queryURL);
     axios.get(queryURL).then(response => {
       res.json(response.data);
     });
