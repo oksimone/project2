@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       default: false
     },
-    ////This determines if the movie has been added to the watch list
+    //This determines if the movie has been added to the watch list
     onPlaylist: {
       type: DataTypes.BOOLEAN,
       allowNull: false,
