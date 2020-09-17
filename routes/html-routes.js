@@ -29,5 +29,8 @@ module.exports = function(app) {
 
   app.get("/results", isAuthenticated, (req, res) => {
     res.render("results");
+
+  app.get("/watchlist", (req, res) => {
+    res.render("watchlist");
   });
 };
