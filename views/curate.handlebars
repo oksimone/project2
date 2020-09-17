@@ -10,7 +10,7 @@
 </head>
 
 <body> --}}
-  <!-- <nav class="navbar navbar-default">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/logout">
@@ -19,50 +19,74 @@
     </div>
   </div>
 </nav> -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-3">
-        <h2 id= "secondpage">Curate Playlist <span class="member-name"></span></h2>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-3">
+      <h2 id="secondpage">Curate Playlist <span class="member-name"></span></h2>
     </div>
-
-    <div class ="row">
-      <div class="col-6">
-        <h3 class="text-center">Let's get started customizing your playlist!</h3>
-        </div>
-    </div>  
-    
-    <form class= "mb-2">
-      <div class="row">
-        <div class="col-md-4">
-          <p>Enter date of birth</p>
-          <input type="text" class="form-control" placeholder="XX/XX/XXX">
-        </div>
-          <div class= "col-md-4">
-            <p>Genre</p>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-          <div class= "col-md-4 mr-5">
-            <p>Choose what you'd like to see</p>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-            <button type="button" class="btn btn-outline-dark">Dark</button>
-          </div>
-
-        
-
-      </div>
-    </form>
-    
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+  <div class="row">
+    <div class="col-6">
+      <h3 class="text-center">Let's get started customizing your playlist!</h3>
+    </div>
+  </div>
+
+  <form class="mb-2">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Enter date of birth</p>
+        <input type="text" class="form-control" placeholder="XX/XX/XXX">
+      </div>
+      <div class="col-md-4">
+        <p>Genre</p>
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+            <i> Choose up to three Genre </i>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
+
+            <li>
+              <label>
+                <input type="checkbox"> Action
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="checkbox"> Adventure
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="checkbox"> Horror
+              </label>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 mr-5">
+        <p>Choose what you'd like to see</p>
+        <select id="inputState" class="form-control">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+      </div>
+
+
+
+    </div>
+  </form>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/members.js"></script>
 
 {{!-- </body>
 
