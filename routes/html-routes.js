@@ -26,4 +26,8 @@ module.exports = function(app) {
   app.get("/curate", isAuthenticated, (req, res) => {
     res.render("curate");
   });
+
+  app.get("/watchlist", (req, res) => {
+    res.render("watchlist");
+  });
 };
