@@ -2,7 +2,8 @@ $(document).ready(() => {
   const surveyForm = $("#survey-form");
   const dobInput = $("input#dob-input");
   const genreInput = $("input#genre-input");
-  const typeInput = $("input#type-input");
+  const typeInput = $("input#inputState");
+  let completedSurvey = false;
   const genreObjArr = [
     {
       name: "Action",
@@ -113,6 +114,8 @@ $(document).ready(() => {
       id: 37
     }
   ];
+  let choiceNums;
+  const choiceArr = [];
 
   //checkbox functionality
   $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
@@ -126,6 +129,7 @@ $(document).ready(() => {
 
   surveyForm.on("submit", event => {
     event.preventDefault();
+    console.log(genreInput);
     if (dobInput > 18) {
       // let dob = code for including adult movies
     } else {
@@ -137,5 +141,6 @@ $(document).ready(() => {
       dob: dob,
       genre: genreID
     };
+    completedSurvey = true;
   });
 });
