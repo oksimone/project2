@@ -1,3 +1,5 @@
+
+<script src="/js/multi-select.js" ></script>
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-3 ">
@@ -11,7 +13,7 @@
     </div>
   </div>
 
-  <form class="mb-2">
+  <form id="survey-form" class="mb-2">
     <div class="row">
 
 
@@ -124,124 +126,57 @@
 
       <div class="col-md-3" id="genrelist">
         <p>Genre</p>
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-            <i> Choose up to three Genres </i>
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu checkbox-menu allow-focus" aria-labelledby="dropdownMenu1">
-            <li>
-              <label> <input type="checkbox" /> Action </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Adventure </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Animation </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Comedy </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Crime </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Documentary </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Drama </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Family </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Kids </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Fantasy </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> History </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> Horror </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Music </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Mystery </label>
-            </li>
-
-            <li>
-              <label> <input type="checkbox" /> News </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Reality </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Romance </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Science Fiction </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Sci-Fi & Fantasy </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Soap </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Talk </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> TV Movie </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Thriller </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> War </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> War & Politics </label>
-            </li>
-            <li>
-              <label> <input type="checkbox" /> Western </label>
-            </li>
-          </ul>
-        </div>
+        <select id="example-multiple-selected" multiple="multiple">
+            <option value="28">Action</option>
+            <option value="10759">Action & Adventure</option>
+            <option value="12">Adventure</option>
+            <option value="16">Animation</option>
+            <option value="35">Comedy</option>
+            <option value="80">Crime</option>
+            <option value="99">Documentary</option>
+            <option value="18">Drama</option>
+            <option value="10751">Family</option>
+            <option value="10762">Kids</option>
+            <option value="14">Fantasy</option>
+            <option value="36">History</option>
+            <option value="27">Horror</option>
+            <option value="10402">Music</option>
+            <option value="9648">Mystery</option>
+            <option value="10763">News</option>
+            <option value="10764">Reality</option>
+            <option value="10749">Romance</option>
+            <option value="878">Science Fiction</option>
+            <option value="10765">Sci-Fi & Fantasy</option>
+            <option value="10766">Soap</option>
+            <option value="10767">Talk</option>
+            <option value="10770">TV Movie</option>
+            <option value="53">Thriller</option>
+            <option value="10752">War</option>
+            <option value="10768">War & Politics</option>
+            <option value="37">Western</option>
+         </select>
       </div>
-      <div class="col-md-3">
-        <p>Choose what you'd like to see</p>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>Movies</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <button type="submit" class="btn btn-outline-dark" id="submitbtn">Submit</button>
-      </div>
-
     </div>
-
-
-  </form>
+    <div class="col-md-3">
+      <p>Choose what you'd like to see</p>
+      <select id="typeInput" class="form-control">
+        <option selected>Choose...</option>
+        <option value="Movies">Movies</option>
+      </select>
+    </div>
+    <div class="col-md-3">
+      <button type="submit" class="btn btn-outline-dark" id="submitbtn">Submit</button>
+    </div>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/curate.js"></script>
 
+</form>
+
+</div>
+
+
+<script type="text/javascript" src="js/curate.js"></script>
 {{!-- </body>
 
 </html> --}}
