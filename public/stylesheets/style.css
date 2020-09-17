@@ -6,10 +6,17 @@ form.login {
 #secondpage{
   font-size: 12vw;
   white-space: nowrap;
-  margin-top: 80%;
+  margin-top: 60%;
   
 }
 
+#submitbtn{
+  margin-top: 30px;
+}
+
+#genrelist{
+  padding-right:30px;
+}
 
 .results {
   height: 100%;
