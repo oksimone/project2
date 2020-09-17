@@ -34,6 +34,13 @@ $(document).ready(() => {
     }
     console.log(choiceNums);
     console.log(ageFilter);
-    completedSurvey = true;
+    // User.completedSurvey = true;
+
+    $.ajax({
+      url: "/api/movies/g/" + choiceNums,
+      method: "GET"
+    }).then(results => {
+      console.log(results);
+    });
   });
 });
