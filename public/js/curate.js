@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const surveyForm = $("form.survey");
+  const surveyForm = $("#survey-form");
   const dobInput = $("input#dob-input");
   const genreInput = $("input#genre-input");
   const typeInput = $("input#type-input");
@@ -113,6 +113,16 @@ $(document).ready(() => {
       id: 37
     }
   ];
+
+  //checkbox functionality
+  $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
+    $(this)
+      .closest("li")
+      .toggleClass("active", this.checked);
+  });
+  $(document).on("click", ".allow-focus", e => {
+    e.stopPropagation();
+  });
 
   surveyForm.on("submit", event => {
     event.preventDefault();
