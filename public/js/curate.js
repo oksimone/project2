@@ -1,9 +1,8 @@
 $(document).ready(() => {
+  $("#example-multiple-selected").multiselect();
   const surveyForm = $("#survey-form");
-  const dobInput = $("input#dob-input");
-  const genreInput = $("input#genre-input");
-  const typeInput = $("input#inputState");
   let completedSurvey = false;
+  let ageFilter;
   const genreObjArr = [
     {
       name: "Action",
@@ -114,33 +113,36 @@ $(document).ready(() => {
       id: 37
     }
   ];
-  let choiceNums;
-  const choiceArr = [];
+  let choiceNums = "";
 
-  //checkbox functionality
-  $(".checkbox-menu").on("change", "input[type='checkbox']", function() {
-    $(this)
-      .closest("li")
-      .toggleClass("active", this.checked);
-  });
-  $(document).on("click", ".allow-focus", e => {
-    e.stopPropagation();
-  });
-
-  surveyForm.on("submit", event => {
+  surveyForm.on("submit", function(event) {
     event.preventDefault();
+    const ageInput = $("#inputState").val();
+    const genreInput = $("#example-multiple-selected").val();
+    const typeInput = $("#typeInput").val();
+    console.log(ageInput);
     console.log(genreInput);
-    if (dobInput > 18) {
-      // let dob = code for including adult movies
+    console.log(typeInput);
+    if (ageInput >= 18) {
+      ageFilter = "&include_adult=true";
     } else {
-      // let dob = code for not including adult movies
-    }
-    const genreDetails = genreObjArr.find(obj => obj.name === genreInput);
-    const genreID = genreDetails.id;
-    const surveyData = {
-      dob: dob,
-      genre: genreID
+      ageFilter = "&include_adult=false";
     };
+    if (genreInput.length = 1) {
+      choiceNums = "" + genreInput[0];
+    } else if (genreInput.length === 2) {
+      choiceNums = "" + genreInput[0] + "," + genreInput[1];
+    } else if (genreInput.length === 3) {
+      choiceNums = "" + genreInput[0] + "," + genreInput[1] + "," + genreInput[2];
+    } else if (genreInput.length > 3) {
+      alert("Please select a MAXIMUM of 3 genres!");
+      return;
+    } else if (genreInput.length < 1) {
+      alert("Please select one, two, or three genres!");
+      return;
+    }
+    console.log(choiceNums);
+    console.log(ageFilter);
     completedSurvey = true;
   });
 });
