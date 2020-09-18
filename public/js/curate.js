@@ -41,6 +41,30 @@ $(document).ready(() => {
       method: "GET"
     }).then(results => {
       console.log(results);
+      loadMovies(results);
     });
   });
 });
+
+function loadMovies(data) {
+  let space = 10;
+  console.log(data.results);
+  for (let i = 0; i < space; i++) {
+    //if id throws an error in the db call (aka if the id matches any one already in the movie table, skip it), space++
+    // if (data.results[i].id === one of the id's in the movies table) {
+    //   space++;
+    //   i++;
+    // } else {
+    //take data aka results and do an ajax post to the movie table using all the response arrays up to 10 index
+    console.log(data.results[i]);
+    $.post("api/movielist", {
+      title: data.results[i].title,
+      id: data.results[i].id,
+      genre: "" + data.results[i].genre_ids,
+      backDrop: "http://image.tmdb.org/t/p/original" + data.results[i].backdrop_path,
+      poster: "http://image.tmdb.org/t/p/original" + data.results[i].poster_path
+    });
+    // }
+  }
+  //this table is then loaded into the js for the results page later on
+}
