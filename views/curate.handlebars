@@ -1,5 +1,5 @@
-
 <script src="/js/multi-select.js" ></script>
+<div class="container-fluid">
 
 <nav role="navigation">
   <div id="menuToggle">
@@ -29,22 +29,22 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-3 ">
-      <h2 id="secondpage">Curate Playlist <span class="member-name"></span></h2>
+    <div class="col-12 ">
+      <h2 class="text-center" id="secondpage">Curate Playlist <span class="member-name"></span></h2>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-6">
-      <h3 class="text-center" id="customize">Let's get started customizing your playlist!</h3>
+  <div class="row" id="customize">
+    <div class="col-12">
+      <h3 class="text-center">Let's get started customizing your playlist!</h3>
     </div>
   </div>
 
   <form id="survey-form" class="mb-2">
-    <div class="row">
+    <div class="row" id="curatepage">
 
 
-      <div class="col-md-3">
+      <div class="col-md-3 col-xl-3">
         <p>Enter Age</p>
         <select id="inputState" class="form-control">
           <option selected>Choose...</option>
@@ -147,52 +147,50 @@
           <option>99+</option>
 
         </select>
-        {{!-- <input type="text" class="form-control" placeholder="XX/XX/XXX"> --}}
       </div>
 
-
-      <div class="col-md-3" id="genrelist">
+      <div class="col-md-3 col-xl-3" id="genrelist">
         <p>Genre</p>
         <select id="example-multiple-selected" multiple="multiple">
-            <option value="28">Action</option>
-            <option value="10759">Action & Adventure</option>
-            <option value="12">Adventure</option>
-            <option value="16">Animation</option>
-            <option value="35">Comedy</option>
-            <option value="80">Crime</option>
-            <option value="99">Documentary</option>
-            <option value="18">Drama</option>
-            <option value="10751">Family</option>
-            <option value="10762">Kids</option>
-            <option value="14">Fantasy</option>
-            <option value="36">History</option>
-            <option value="27">Horror</option>
-            <option value="10402">Music</option>
-            <option value="9648">Mystery</option>
-            <option value="10763">News</option>
-            <option value="10764">Reality</option>
-            <option value="10749">Romance</option>
-            <option value="878">Science Fiction</option>
-            <option value="10765">Sci-Fi & Fantasy</option>
-            <option value="10766">Soap</option>
-            <option value="10767">Talk</option>
-            <option value="10770">TV Movie</option>
-            <option value="53">Thriller</option>
-            <option value="10752">War</option>
-            <option value="10768">War & Politics</option>
-            <option value="37">Western</option>
-         </select>
+          <option value="28">Action</option>
+          <option value="10759">Action & Adventure</option>
+          <option value="12">Adventure</option>
+          <option value="16">Animation</option>
+          <option value="35">Comedy</option>
+          <option value="80">Crime</option>
+          <option value="99">Documentary</option>
+          <option value="18">Drama</option>
+          <option value="10751">Family</option>
+          <option value="10762">Kids</option>
+          <option value="14">Fantasy</option>
+          <option value="36">History</option>
+          <option value="27">Horror</option>
+          <option value="10402">Music</option>
+          <option value="9648">Mystery</option>
+          <option value="10763">News</option>
+          <option value="10764">Reality</option>
+          <option value="10749">Romance</option>
+          <option value="878">Science Fiction</option>
+          <option value="10765">Sci-Fi & Fantasy</option>
+          <option value="10766">Soap</option>
+          <option value="10767">Talk</option>
+          <option value="10770">TV Movie</option>
+          <option value="53">Thriller</option>
+          <option value="10752">War</option>
+          <option value="10768">War & Politics</option>
+          <option value="37">Western</option>
+        </select>
       </div>
-    </div>
-    <div class="col-md-3">
-      <p>Choose what you'd like to see</p>
-      <select id="typeInput" class="form-control">
-        <option selected>Choose...</option>
-        <option value="Movies">Movies</option>
-      </select>
-    </div>
-    <div class="col-md-3">
-      <button type="submit" class="btn btn-outline-dark" id="submitbtn">Submit</button>
+      <div class="col-md-3 col-xl-3">
+        <p>Choose what you'd like to see</p>
+        <select id="typeInput" class="form-control">
+          <option selected>Choose...</option>
+          <option value="Movies">Movies</option>
+        </select>
+      </div>
+      <div class="col-md-3 col-xl-3">
+        <button type="submit" class="btn btn-outline-dark" id="submitbtn">Submit</button>
+      </div>
     </div>
 
 </div>
@@ -204,6 +202,3 @@
 
 
 <script type="text/javascript" src="js/curate.js"></script>
-{{!-- </body>
-
-</html> --}}
