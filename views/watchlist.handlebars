@@ -1,6 +1,27 @@
-<!-- As a heading -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">Pandemic <br> Playlist</a>
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    menu options
+    -->
+    <ul id="menu">
+      <a href="#"><li>My Playlist</li></a>
+      <a href="#"><li>Favorites</li></a>
+      <a href="#"><li>Logout</li></a>
+    </ul>
+  </div>
 </nav>
 
 <div class="container">
@@ -12,11 +33,12 @@
             height="200px">
           <div class="j-heart"></div>
         </div>
+{{!--         
         <div class="heart">
           <div class ="heartclick"></div>
           <img src="http://image.tmdb.org/t/p/original/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg" class="movieImage" width="350px"
             height="200px" id="thumb">
-        </div>
+        </div> --}}
       </div>
     </div>
     <div class="col-sm-4">
