@@ -1,5 +1,33 @@
-<script src="/js/multi-select.js"></script>
+<script src="/js/multi-select.js" ></script>
 <div class="container-fluid">
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    menu options
+    -->
+    <ul id="menu">
+      <a href="#"><li>My Playlist</li></a>
+      <a href="#"><li>Favorites</li></a>
+      <a href="#"><li>Logout</li></a>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
   <div class="row">
     <div class="col-12 ">
       <h2 class="text-center" id="secondpage">Curate Playlist <span class="member-name"></span></h2>
