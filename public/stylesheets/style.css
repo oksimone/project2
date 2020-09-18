@@ -247,7 +247,6 @@ body {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-<<<<<<< HEAD
 .checkbox-menu li.active label:hover,
 .checkbox-menu li.active label:focus {
   background-color: #b8b8ff;
@@ -257,7 +256,7 @@ body {
 background-color: #777;
 opacity: 0.3;
 }
-
+/* the start of like button */
 .heart {
   width: 100px;
   height: 100px;
@@ -292,6 +291,7 @@ opacity: 0.3;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
 }
+/* end of like button */
 
 #customize{
   padding-bottom: 20px;
@@ -299,7 +299,6 @@ opacity: 0.3;
 #curatepage{
   padding-left:60px;
 }
-=======
 /*
   * Make this absolute positioned
   * at the top left of the screen
@@ -334,4 +333,3 @@ opacity: 0.3;
 #menuToggle input:checked ~ ul {
   transform: none;
 }
->>>>>>> cf7cff72893836430131128ed0746eb478f3b0a7
