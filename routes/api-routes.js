@@ -31,6 +31,28 @@ module.exports = function(app) {
       });
   });
 
+  // Route for movie storage
+  app.post("/api/movielist", (req, res) => {
+    db.Movie.create({
+      title: req.body.title,
+      id: req.body.id,
+      hasWatched: false,
+      onPlaylist: false,
+      genre: req.body.genre,
+      backDrop: req.body.backDrop,
+      poster: req.body.poster,
+      UserId: req.user.id
+    }).then(response => {
+      res.json(response);
+    });
+  });
+
+  app.get("/api/movielist", (req, res) => {
+    db.Movie.findAll().then(result => {
+      return res.json(result);
+    });
+  });
+
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
