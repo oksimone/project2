@@ -252,12 +252,15 @@ body {
   background-color: #b8b8ff;
 }
 
-#thumb:hover{
-background-color: #777;
-opacity: 0.3;
+
+.movie:hover{
+/* background-color: black; */
+/* opacity: 50%; */
+width: 100px;
+height: 100px;
 }
 /* the start of like button */
-.heart {
+/* .heart {
   width: 100px;
   height: 100px;
   background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
@@ -265,7 +268,7 @@ opacity: 0.3;
   cursor: pointer;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
-}
+} */
  .is-active {
     transition-duration: 1s;
     background-position: -2800px 0;
@@ -280,8 +283,8 @@ opacity: 0.3;
 }
 
 .movie:hover .j-heart {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height:90px;
   position: absolute;
   top: 0;
   left: 0;
@@ -290,6 +293,7 @@ opacity: 0.3;
   cursor: pointer;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
+  
 }
 /* end of like button */
 
