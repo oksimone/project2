@@ -26,6 +26,14 @@ module.exports = function(sequelize, DataTypes) {
     //The main genre name and id will be grabbed from the api
     genre: {
       type: DataTypes.STRING
+    },
+
+    backDrop: {
+      type: DataTypes.STRING
+    },
+
+    poster: {
+      type: DataTypes.STRING
     }
   });
 
