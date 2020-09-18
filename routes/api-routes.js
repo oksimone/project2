@@ -2,6 +2,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const axios = require("axios");
+const movie = require("../models/movie");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -38,9 +39,12 @@ module.exports = function(app) {
       id: req.body.id,
       hasWatched: false,
       onPlaylist: false,
+      isFavorite: false,
       genre: req.body.genre,
       backDrop: req.body.backDrop,
       poster: req.body.poster,
+      releaseDate: req.body.releaseDate,
+      description: req.body.description,
       UserId: req.user.id
     }).then(response => {
       res.json(response);
@@ -48,7 +52,7 @@ module.exports = function(app) {
   });
 
   app.get("/api/movielist", (req, res) => {
-    db.Movie.findAll().then(result => {
+    db.Movie.findAll({ where: { UserId: req.user.id } }).then(result => {
       return res.json(result);
     });
   });
