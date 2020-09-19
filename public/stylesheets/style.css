@@ -303,15 +303,94 @@ form.login {
 }
 
 /* ========================================================= playlist =========================================================== */
+/* the start of like button */
 
-.movie:hover {
+#moviemargin{
+  margin-top:10%;
+}
+
+#f1_container {
+position: relative;
+margin: 10px auto;
+width: 350px;
+height: 200px;
+z-index: 1;
+}
+#f1_container {
+perspective: 1000;
+}
+#f1_card {
+width: 100%;
+height: 100%;
+transform-style: preserve-3d;
+transition: all 1s linear;
+}
+#f1_container:hover #f1_card {
+transform: rotateY(180deg);
+box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+.face.back {
+display: block;
+transform: rotateY(180deg);
+box-sizing: border-box;
+padding: 10px;
+color: white;
+text-align: center;
+background-color: #282e34
+}
+
+.heart {
+width: 80px;
+height: 80px;
+background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+no-repeat;
+background-position: 0 0;
+cursor: pointer;
+transition: background-position 1s steps(28);
+transition-duration: 0s;
+}
+
+.is-active {
+transition-duration: 1s;
+background-position: -2800px 0;
+}
+
+
+.placement {
+position: fixed;
+top: 6%;
+left: 7%;
+transform: translate(-50%, -50%);
+}
+
+#plusico{
+  position: fixed;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  background-color: #282e34;
+ 
+}
+
+.watchP{
+  margin-top: 10%;
+}
+
+
+/* .movie:hover { */
   /* background-color: black; */
   /* opacity: 50%; */
-  width: 100px;
+  /* width: 100px;
   height: 100px;
-}
-/* the start of like button */
-/* .heart {
+} */
+
+/* .heart:hover {
   width: 100px;
   height: 100px;
   background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
@@ -320,7 +399,7 @@ form.login {
   transition: background-position 1s steps(28);
   transition-duration: 0s;
 } */
-.is-active {
+/* .is-active {
   transition-duration: 1s;
   background-position: -2800px 0;
 }
@@ -345,7 +424,7 @@ form.login {
   cursor: pointer;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
-}
+} */
 /* end of like button */
 
 #customize {
@@ -376,4 +455,8 @@ form.login {
   .backdrop {
     background-attachment: scroll;
   }
+}
+
+#watchcontain {
+  margin-top: 10%;
 }
