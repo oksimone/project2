@@ -39,6 +39,10 @@ module.exports = function(app) {
     res.render("moreInfo");
   });
 
+  app.get("/moreInfo/:id", isAuthenticated, (req, res) => {
+    res.render("moreInfo");
+  });
+
   app.get("/favorites", isAuthenticated, (req, res) => {
     res.render("favorites");
   });
