@@ -1,5 +1,3 @@
-// const movie = require("../../models/movie.js");
-
 $(document).ready(() => {
   $("#example-multiple-selected").multiselect();
   const surveyForm = $("#survey-form");
@@ -70,7 +68,13 @@ function loadMovies(data) {
             "http://image.tmdb.org/t/p/original" + data.results[i].poster_path,
           releaseDate: data.results[i].release_date,
           description: data.results[i].overview
-        });
+        })
+          .then(() => {
+            window.location.replace("/results");
+          })
+          .catch(err => {
+            console.log(err);
+          });
         // }
       }
       //this table is then loaded into the js for the results page later on
