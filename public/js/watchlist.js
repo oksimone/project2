@@ -1,3 +1,11 @@
+$(() => {
+  $(".heart").on("click", function(event) {
+    event.stopPropagation();
+    $(this).toggleClass("is-active");
+    console.log(event);
+  });
+});
+
 // $(() => {
 //   $(".j-heart").on("click", function(event) {
 //     event.stopPropagation();
