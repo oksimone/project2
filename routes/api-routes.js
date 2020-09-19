@@ -67,7 +67,7 @@ module.exports = function(app) {
   });
 
   //route for more info with a certain movie
-  app.get("/api/moreinfo/id/:id", (req, res) => {
+  app.get("/api/moreinfo/:id", (req, res) => {
     db.Movie.findAll({
       where: { UserId: req.user.id, id: req.params.id }
     }).then(result => {
