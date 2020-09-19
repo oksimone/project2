@@ -38,4 +38,8 @@ module.exports = function(app) {
   app.get("/moreInfo", isAuthenticated, (req, res) => {
     res.render("moreInfo");
   });
+
+  app.get("/favorites", isAuthenticated, (req, res) => {
+    res.render("favorites");
+  });
 };

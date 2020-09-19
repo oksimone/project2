@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  $("#example-multiple-selected").multiselect();
+  // $("#example-multiple-selected").multiselect();
   const surveyForm = $("#survey-form");
   let ageFilter;
   let choiceNums = "";

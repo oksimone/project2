@@ -55,8 +55,9 @@ form.login {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bgimg-1 {
-  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  background-image: url("https://payload.cargocollective.com/1/11/367710/13568488/MOVIECLASSICSerikweb_2500_2500.jpg");
   min-height: 650px;
 }
 
@@ -111,7 +112,7 @@ form.login {
 }
 
 .bgimg-12 {
-  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  background-image: url("https://payload.cargocollective.com/1/11/367710/13568488/MOVIECLASSICSerikweb_2500_2500.jpg");
   min-height: 600px;
 }
 
@@ -121,7 +122,6 @@ form.login {
   top: 50%;
   width: 100%;
   text-align: center;
-  color: #000;
 }
 
 .resultsTitle{
@@ -190,7 +190,7 @@ form.login {
 }
 
 #menuToggle a:hover {
-  color: rgb(214, 132, 25);
+  color: orange;
 }
 
 #menuToggle input {
