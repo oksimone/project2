@@ -182,6 +182,7 @@ form.login {
   z-index: 2;
   -webkit-user-select: none;
   user-select: none;
+  height:100%;
 }
 
 #menuToggle a {
@@ -460,4 +461,8 @@ transform: translate(-50%, -50%);
 
 #watchcontain {
   margin-top: 10%;
+}
+
+.p1{
+  position: relative;
 }
