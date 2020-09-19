@@ -57,7 +57,7 @@ form.login {
 }
 
 .bgimg-1 {
-  background-image: url("/assets/photos/results-top-pic.png");
+  background-image: url("https://payload.cargocollective.com/1/11/367710/13568488/MOVIECLASSICSerikweb_2500_2500.jpg");
   min-height: 650px;
 }
 
@@ -178,9 +178,10 @@ form.login {
   position: fixed;
   top: 50px;
   left: 50px;
-  z-index: 1;
+  z-index: 2;
   -webkit-user-select: none;
   user-select: none;
+  height:100%;
 }
 
 #menuToggle a {
@@ -459,4 +460,8 @@ transform: translate(-50%, -50%);
 
 #watchcontain {
   margin-top: 10%;
+}
+
+.p1{
+  position: relative;
 }
