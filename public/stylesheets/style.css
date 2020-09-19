@@ -176,6 +176,7 @@ form.login {
 #menuToggle {
   display: block;
   position: fixed;
+  height: 100%;
   top: 50px;
   left: 50px;
   z-index: 2;
@@ -275,7 +276,7 @@ form.login {
 #menu {
   position: absolute;
   width: 250px;
-  height: 53em;
+  height: 100%;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
