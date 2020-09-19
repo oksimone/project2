@@ -133,7 +133,7 @@ form.login {
 }
 
 .resultsTitle span.border {
-  background-color: #111;
+  background-color: transparent;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
@@ -466,3 +466,49 @@ transform: translate(-50%, -50%);
 .p1{
   position: relative;
 }
+
+/* ======================================================tool tips========================================== */
+
+      #tooltip {
+        background: #333;
+        color: white;
+        font-weight: bold;
+        padding: 4px 8px;
+        font-size: 13px;
+        border-radius: 4px;
+        display: none;
+      }
+
+      #tooltip[data-show] {
+        display: block;
+      }
+
+      #arrow,
+      #arrow::before {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        z-index: -1;
+      }
+
+      #arrow::before {
+        content: '';
+        transform: rotate(45deg);
+        background: #333;
+      }
+
+      #tooltip[data-popper-placement^='top'] > #arrow {
+        bottom: -4px;
+      }
+
+      #tooltip[data-popper-placement^='bottom'] > #arrow {
+        top: -4px;
+      }
+
+      #tooltip[data-popper-placement^='left'] > #arrow {
+        right: -4px;
+      }
+
+      #tooltip[data-popper-placement^='right'] > #arrow {
+        left: -4px;
+      }
