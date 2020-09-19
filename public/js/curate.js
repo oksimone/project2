@@ -1,7 +1,8 @@
+// const movie = require("../../models/movie.js");
+
 $(document).ready(() => {
   $("#example-multiple-selected").multiselect();
   const surveyForm = $("#survey-form");
-  let completedSurvey = false;
   let ageFilter;
   let choiceNums = "";
 
@@ -34,13 +35,11 @@ $(document).ready(() => {
     }
     console.log(choiceNums);
     console.log(ageFilter);
-    // User.completedSurvey = true;
 
     $.ajax({
       url: "/api/movies/g/" + choiceNums,
       method: "GET"
     }).then(results => {
-      console.log(results);
       loadMovies(results);
     });
   });
@@ -48,23 +47,33 @@ $(document).ready(() => {
 
 function loadMovies(data) {
   let space = 10;
-  console.log(data.results);
-  for (let i = 0; i < space; i++) {
-    //if id throws an error in the db call (aka if the id matches any one already in the movie table, skip it), space++
-    // if (data.results[i].id === one of the id's in the movies table) {
-    //   space++;
-    //   i++;
-    // } else {
-    //take data aka results and do an ajax post to the movie table using all the response arrays up to 10 index
-    console.log(data.results[i]);
-    $.post("api/movielist", {
-      title: data.results[i].title,
-      id: data.results[i].id,
-      genre: "" + data.results[i].genre_ids,
-      backDrop: "http://image.tmdb.org/t/p/original" + data.results[i].backdrop_path,
-      poster: "http://image.tmdb.org/t/p/original" + data.results[i].poster_path
-    });
-    // }
-  }
-  //this table is then loaded into the js for the results page later on
+
+  $.get("/api/movielist").then(movieList => {
+    const movieListIds = movieList.map(movie => movie.id);
+    for (let i = 0; i < space; i++) {
+      //if id throws an error in the db call (aka if the id matches any one already in the movie table, skip it), space++
+      if (movieListIds.includes(data.results[i].id)) {
+        space++;
+        console.log("Skipping id " + data.results[i].id);
+        continue;
+      } else {
+        //take data aka results and do an ajax post to the movie table using all the response arrays up to 10 index
+        console.log(data.results[i]);
+        $.post("/api/movielist", {
+          title: data.results[i].title,
+          id: data.results[i].id,
+          genre: "" + data.results[i].genre_ids,
+          backDrop:
+            "http://image.tmdb.org/t/p/original" +
+            data.results[i].backdrop_path,
+          poster:
+            "http://image.tmdb.org/t/p/original" + data.results[i].poster_path,
+          releaseDate: data.results[i].release_date,
+          description: data.results[i].overview
+        });
+        // }
+      }
+      //this table is then loaded into the js for the results page later on
+    }
+  });
 }

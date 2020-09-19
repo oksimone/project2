@@ -23,17 +23,30 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
       default: false
     },
+    //This determines if the movie has been added to favorites
+    isFavorite: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      default: false
+    },
     //The main genre name and id will be grabbed from the api
     genre: {
       type: DataTypes.STRING
     },
-
+    //This contains the link to the backdrop image from the api
     backDrop: {
       type: DataTypes.STRING
     },
-
+    //This contains the link to the poster image from the api
     poster: {
       type: DataTypes.STRING
+    },
+    //This contains the release date of the movie
+    releaseDate: {
+      type: DataTypes.STRING
+    },
+    description: {
+      type: DataTypes.TEXT
     }
   });
 
