@@ -57,6 +57,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/searchresults", (req, res) => {
+    db.Movie.findAll({ limit: 10, order: ["createdAt"] }).then(result => {
+      return res.json(result);
+    });
+  });
+
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();

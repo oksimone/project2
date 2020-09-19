@@ -31,7 +31,11 @@ module.exports = function(app) {
     res.render("results");
   });
 
-  app.get("/watchlist", (req, res) => {
+  app.get("/watchlist", isAuthenticated, (req, res) => {
     res.render("watchlist");
+  });
+
+  app.get("/moreInfo", isAuthenticated, (req, res) => {
+    res.render("moreInfo");
   });
 };
