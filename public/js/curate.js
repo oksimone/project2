@@ -1,13 +1,16 @@
 $(document).ready(() => {
+<<<<<<< HEAD
   // $("#example-multiple-selected").multiselect();
+=======
+>>>>>>> 9e8bfd1e8ec4e68d17e9860fb72fce08f4431e26
   const surveyForm = $("#survey-form");
   let ageFilter;
-  let choiceNums = "";
+  // let choiceNums = "";
 
   surveyForm.on("submit", event => {
     event.preventDefault();
     const ageInput = $("#inputState").val();
-    const genreInput = $("#example-multiple-selected").val();
+    const genreInput = $("#genreInput").val();
     const typeInput = $("#typeInput").val();
     console.log(ageInput);
     console.log(genreInput);
@@ -17,25 +20,25 @@ $(document).ready(() => {
     } else {
       ageFilter = "&include_adult=false";
     }
-    if (genreInput.length === 1) {
-      choiceNums = "" + genreInput[0];
-    } else if (genreInput.length === 2) {
-      choiceNums = "" + genreInput[0] + "," + genreInput[1];
-    } else if (genreInput.length === 3) {
-      choiceNums =
-        "" + genreInput[0] + "," + genreInput[1] + "," + genreInput[2];
-    } else if (genreInput.length > 3) {
-      alert("Please select a MAXIMUM of 3 genres!");
-      return;
-    } else if (genreInput.length < 1) {
-      alert("Please select one, two, or three genres!");
-      return;
-    }
-    console.log(choiceNums);
+    // if (genreInput.length === 1) {
+    //   choiceNums = "" + genreInput[0];
+    // } else if (genreInput.length === 2) {
+    //   choiceNums = "" + genreInput[0] + "," + genreInput[1];
+    // } else if (genreInput.length === 3) {
+    //   choiceNums =
+    //     "" + genreInput[0] + "," + genreInput[1] + "," + genreInput[2];
+    // } else if (genreInput.length > 3) {
+    //   alert("Please select a MAXIMUM of 3 genres!");
+    //   return;
+    // } else if (genreInput.length < 1) {
+    //   alert("Please select one, two, or three genres!");
+    //   return;
+    // }
+    // console.log(choiceNums);
     console.log(ageFilter);
 
     $.ajax({
-      url: "/api/movies/g/" + choiceNums,
+      url: "/api/movies/g/" + genreInput,
       method: "GET"
     }).then(results => {
       loadMovies(results);
