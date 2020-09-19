@@ -1,31 +1,43 @@
+/* ======================================================== global changes ========================================================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  background-color: #282e34;
+  color: #fff;
+}
+
+
+/* ======================================================== signup/login page============================================================= */
+
 form.signup,
 form.login {
   margin-top: 50px;
 }
 
-#secondpage{
+#secondpage {
   font-size: 110px;
   /* white-space: nowrap; */
   padding-top: 300px;
   /* left:300px; */
   /* position: relative; */
-
-  
 }
 
-#submitbtn{
+#submitbtn {
   margin-top: 30px;
 }
 
-#genrelist{
-  padding-right:60px;
+#genrelist {
+  padding-right: 60px;
 }
+
+/* ======================================================= results page =========================================================== */
 
 .results {
   height: 100%;
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
 }
 
 .bgimg-1,
@@ -116,9 +128,24 @@ form.login {
   color: #000;
 }
 
+.resultsTitle{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.resultsTitle span.border {
+  background-color: #111;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
 .caption span.border {
   background-color: #111;
-  color: #fff;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
@@ -128,7 +155,6 @@ form.login {
   letter-spacing: 5px;
   text-transform: uppercase;
   font: 20px "Lato", sans-serif;
-  color: #fff;
 }
 
 /* Turn off parallax scrolling for tablets and phones */
@@ -149,26 +175,20 @@ form.login {
   }
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
+/* ============================================================== hamburge r======================================================== */
 
 #menuToggle {
   display: block;
   position: fixed;
   top: 50px;
   left: 50px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
 
 #menuToggle a {
   text-decoration: none;
-  color: #ffffff;
   transition: color 0.3s ease;
 }
 
@@ -192,9 +212,8 @@ body {
   -webkit-touch-callout: none;
 }
 
-/*
-  * Just a quick hamburger
-  */
+/* Just a quick hamburger */
+
 #menuToggle span {
   display: block;
   width: 33px;
@@ -251,58 +270,6 @@ body {
 .checkbox-menu li.active label:focus {
   background-color: #b8b8ff;
 }
-
-
-.movie:hover{
-/* background-color: black; */
-/* opacity: 50%; */
-width: 100px;
-height: 100px;
-}
-/* the start of like button */
-/* .heart {
-  width: 100px;
-  height: 100px;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-} */
- .is-active {
-    transition-duration: 1s;
-    background-position: -2800px 0;
-  }
-
-#heartclick{
-  position: absolute;
-}
-
-.movie {
-  position: relative;
-}
-
-.movie:hover .j-heart {
-  width: 90px;
-  height:90px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-  
-}
-/* end of like button */
-
-#customize{
-  padding-bottom: 20px;
-}
-#curatepage{
-  padding-left:60px;
-}
 /*
   * Make this absolute positioned
   * at the top left of the screen
@@ -310,7 +277,7 @@ height: 100px;
 #menu {
   position: absolute;
   width: 250px;
-  height: 52em;
+  height: 53em;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -332,8 +299,84 @@ height: 100px;
 }
 
 /*
-  * slide it in from the left
- */
+    * slide it in from the left
+   */
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+/* ========================================================= playlist =========================================================== */
+
+.movie:hover {
+  /* background-color: black; */
+  /* opacity: 50%; */
+  width: 100px;
+  height: 100px;
+}
+/* the start of like button */
+/* .heart {
+  width: 100px;
+  height: 100px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+} */
+.is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+#heartclick {
+  position: absolute;
+}
+
+.movie {
+  position: relative;
+}
+
+.movie:hover .j-heart {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+    no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+}
+/* end of like button */
+
+#customize {
+  padding-bottom: 20px;
+}
+#curatepage {
+  padding-left: 60px;
+}
+
+/* ======================================================= moreInfo ================================================================ */
+
+
+.infoBackdrop {
+  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 650px;
+}
+
+/* .zoomed {
+} */
+
+@media only screen and (max-device-width: 1024px) {
+  .backdrop {
+    background-attachment: scroll;
+  }
 }
