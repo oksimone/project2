@@ -1,8 +1,4 @@
 $(document).ready(() => {
-<<<<<<< HEAD
-  // $("#example-multiple-selected").multiselect();
-=======
->>>>>>> 9e8bfd1e8ec4e68d17e9860fb72fce08f4431e26
   const surveyForm = $("#survey-form");
   let ageFilter;
   // let choiceNums = "";
