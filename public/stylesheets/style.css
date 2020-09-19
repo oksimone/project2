@@ -3,22 +3,20 @@ form.login {
   margin-top: 50px;
 }
 
-#secondpage{
+#secondpage {
   font-size: 110px;
   /* white-space: nowrap; */
   padding-top: 300px;
   /* left:300px; */
   /* position: relative; */
-
-  
 }
 
-#submitbtn{
+#submitbtn {
   margin-top: 30px;
 }
 
-#genrelist{
-  padding-right:60px;
+#genrelist {
+  padding-right: 60px;
 }
 
 .results {
@@ -252,15 +250,9 @@ body {
   background-color: #b8b8ff;
 }
 
-
-.movie:hover{
-/* background-color: black; */
-/* opacity: 50%; */
-width: 100px;
-height: 100px;
-}
 /* the start of like button */
-/* .heart {
+
+/* .heart:hover {
   width: 100px;
   height: 100px;
   background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
@@ -269,12 +261,19 @@ height: 100px;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
 } */
- .is-active {
-    transition-duration: 1s;
-    background-position: -2800px 0;
-  }
+.movie:hover {
+  /* background-color: black; */
+  /* opacity: 50%; */
+  width: 100px;
+  height: 100px;
+}
 
-#heartclick{
+.is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+#heartclick {
   position: absolute;
 }
 
@@ -284,24 +283,24 @@ height: 100px;
 
 .movie:hover .j-heart {
   width: 90px;
-  height:90px;
+  height: 90px;
   position: absolute;
   top: 0;
   left: 0;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+    no-repeat;
   background-position: 0 0;
   cursor: pointer;
   transition: background-position 1s steps(28);
   transition-duration: 0s;
-  
 }
 /* end of like button */
 
-#customize{
+#customize {
   padding-bottom: 20px;
 }
-#curatepage{
-  padding-left:60px;
+#curatepage {
+  padding-left: 60px;
 }
 /*
   * Make this absolute positioned
@@ -336,4 +335,8 @@ height: 100px;
  */
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+#watchcontain {
+  margin-top: 10%;
 }
