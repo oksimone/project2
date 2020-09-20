@@ -46,4 +46,8 @@ module.exports = function(app) {
   app.get("/favorites", isAuthenticated, (req, res) => {
     res.render("favorites");
   });
+
+  app.get("/watched", isAuthenticated, (req, res) => {
+    res.render("watched");
+  });
 };
