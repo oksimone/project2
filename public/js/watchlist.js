@@ -63,4 +63,18 @@ $(document).ready(() => {
       });
     }
   });
+
+  $(".title").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 45);
+    $(this).text(newstr);
+  });
+
+  $(".description").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 123);
+    $(this).text(newstr);
+  });
 });

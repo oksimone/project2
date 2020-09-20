@@ -45,7 +45,7 @@
   </div>
 </div>
 
-<div class="container-fluid mt-3" id="moviemargin">
+<div class="container-fluid mt-0" id="moviemargin">
   <div class="row">
 
 
@@ -54,12 +54,13 @@
       <div id="f1_container">
         <div id="f1_card" class="shadow">
           <div class="front face">
-            <img src={{backDrop}} width="350px"
-              height="200px" />
+            <img src={{backDrop}} width="400px" height="230px"/>
           </div>
           <div class="back face center">
-            <p class="watchP"><strong>{{title}}</strong></p>
-            <p class="watchP cardD">{{description}}</p>
+            <p class="watchP title"><strong>{{title}}</strong></p>
+            <p class="watchP cardD description mt-1 mb-1">{{description}}</p>
+            <a href=# id="{{id}}">... more info</a>
+
             <div class="placement">
               <div data-tooltip-heart="Favorite">
                 <div class="heart heartico-{{id}}" data-id="{{id}}"></div>
