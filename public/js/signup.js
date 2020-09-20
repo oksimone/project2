@@ -32,11 +32,11 @@ $(document).ready(() => {
         window.location.replace("/curate");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
-      .catch(handleLoginErr);
+      .catch(handleSignupErr);
   }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+  function handleSignupErr() {
+    $("#alert .msg").text("This email account is already in use!");
     $("#alert").fadeIn(500);
   }
 });
