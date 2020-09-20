@@ -65,14 +65,14 @@
             <p class="watchP cardD">{{description}}</p>
             <div class="placement">
               <div data-tooltip-heart="Favorite">
-                <div class="heart heartico-{{id}}"></div>
+                <div class="heart heartico-{{id}}" data-id="{{id}}"></div>
               </div>
             </div>
             <!-- MUST MAKE ICON CLICKABLE -->
             <div data-tooltip-add="Add to Watchlist">
-              <i class="fas fa-plus plusico-{{id}}" id="plusico"></i></div>
+               <a href=#><i class="fas fa-plus plusico-{{id}}" data-id="{{id}}" id="plusico"></i></a></div>
             <div data-tooltip-trash="Remove">
-              <i class="fas fa-trash trashico-{{id}}" id="trashico"></i></div>
+               <a href=#><i class="fas fa-trash trashico-{{id}}" data-id="{{id}}" id="trashico"></i></a></div>
           </div>
         </div>
       </div>
