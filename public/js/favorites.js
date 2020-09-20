@@ -45,15 +45,17 @@ $(document).ready(() => {
     }
   });
 
-  // $(() => {
-  //   $(".j-heart").on("click", function(event) {
-  //     event.stopPropagation();
+  $(".title").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 45);
+    $(this).text(newstr);
+  });
 
-  //     const movieId = $(this)
-  //       .parent()
-  //       .attr("data-id");
-  //     $(this).toggleClass("is-active");
-  //     console.log("clicked " + movieId);
-  //   });
-  // });
+  $(".description").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 123);
+    $(this).text(newstr);
+  });
 });
