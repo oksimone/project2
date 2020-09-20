@@ -57,7 +57,7 @@ $(document).ready(() => {
           method: "DELETE",
           url: "/api/moreinfo/" + buttonID
         });
-        window.location.reload();
+        window.location.href = "/watched";
       });
     }
   });

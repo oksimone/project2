@@ -17,7 +17,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.reload();
+        window.location.href = "/favorites";
       });
       if (!movieList[i].onPlaylist) {
         $(".plusico-" + buttonID).on("click", event => {
@@ -28,7 +28,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.reload();
+          window.location.href = "/favorites";
         });
       } else {
         $(".plusico-" + buttonID).on("click", event => {
@@ -39,21 +39,9 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.reload();
+          window.location.href = "/favorites";
         });
       }
     }
   });
-
-  // $(() => {
-  //   $(".j-heart").on("click", function(event) {
-  //     event.stopPropagation();
-
-  //     const movieId = $(this)
-  //       .parent()
-  //       .attr("data-id");
-  //     $(this).toggleClass("is-active");
-  //     console.log("clicked " + movieId);
-  //   });
-  // });
 });

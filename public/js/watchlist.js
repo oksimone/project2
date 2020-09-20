@@ -59,7 +59,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.reload();
+        window.location.href = "/playlist";
       });
     }
   });
