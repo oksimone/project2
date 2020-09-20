@@ -106,4 +106,88 @@ $(document).ready(() => {
     event.preventDefault();
     window.location.replace("/moreInfo/id/" + $("#info-9").data("movie-id"));
   });
+
+  //clickhandlers for watchlist buttons
+  $("#wl-1").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-2").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-3").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-4").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-5").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-6").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-7").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-8").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-9").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
+
+  $("#wl-10").on("click", event => {
+    event.preventDefault();
+    const movieData = { onPlaylist: true };
+    updateMovie(movieData);
+    setPlaylistButton();
+  });
 });
+
+function updateMovie(movie) {
+  console.log($(this).data("movie-id"));
+  $.ajax({
+    method: "PUT",
+    url: "/api/moreinfo/" + $(this).data("movie-id"),
+    data: movie
+  });
+}
+
+function setPlaylistButton() {
+  $(this).text("Added!");
+}
