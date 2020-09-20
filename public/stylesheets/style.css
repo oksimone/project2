@@ -657,3 +657,30 @@ opacity: 1;
     *[data-tooltip-trash]:hover::after {
     opacity: 1;
     }
+
+
+
+
+    /* =====================================================title Images============================================== */
+
+
+    .favoritesTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .laylistTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .watchedTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
