@@ -387,4 +387,9 @@ $(document).ready(() => {
     event.preventDefault();
     window.location.href = "/moreInfo/" + $("#info-9").data("movie-id");
   });
+
+  $("#info-10").on("click", event => {
+    event.preventDefault();
+    window.location.href = "/moreInfo/" + $("#info-10").data("movie-id");
+  });
 });
