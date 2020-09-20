@@ -57,6 +57,15 @@ module.exports = function(app) {
     });
   });
 
+  //route for updating movielist entries for user
+  app.put("/api/moreinfo/:id", (req, res) => {
+    db.Movie.update(req.body, {
+      where: { UserId: req.user.id, id: req.params.id }
+    }).then(dbMovie => {
+      res.json(dbMovie);
+    });
+  });
+
   //route for grabbing most recent search results to display on results page
   app.get("/api/searchresults", (req, res) => {
     db.Movie.findAll({ limit: 10, order: [["createdAt", "DESC"]] }).then(
