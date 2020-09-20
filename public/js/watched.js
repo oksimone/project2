@@ -55,7 +55,7 @@ $(document).ready(() => {
         event.preventDefault();
         $.ajax({
           method: "DELETE",
-          url: "/api/moreinfo/" + buttonID,
+          url: "/api/moreinfo/" + buttonID
         });
         window.location.reload();
       });
