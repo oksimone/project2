@@ -376,8 +376,25 @@ transition: all 0.33s linear;
   color:white;
  
 }
+#plusico{
+  position: fixed;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  color:white;
+ 
+}
 
 #eyeico{
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+ 
+}
+
+#trashico{
   position: fixed;
   top: 10%;
   left: 50%;
@@ -569,3 +586,73 @@ box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
 *[data-tooltip-eye]:hover::after {
 opacity: 1;
 }
+
+/* start add hover */
+*[data-tooltip-add] {
+  position: relative;
+  color:black;
+  }
+  
+  *[data-tooltip-add]::after {
+  content: attr(data-tooltip-add);
+  
+  position: absolute;
+  top: -185px;
+  right: -20px;
+  width: 150px;
+  
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .15s ease-in-out;
+  -moz-transition: opacity .15s ease-in-out;
+  -ms-transition: opacity .15s ease-in-out;
+  -o-transition: opacity .15s ease-in-out;
+  transition: opacity .15s ease-in-out;
+  
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  background:white;
+  padding: 2px 2px;
+  border: 1px solid #c0c0c0;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  *[data-tooltip-add]:hover::after {
+  opacity: 1;
+  }
+
+  /* start trash hover */
+  *[data-tooltip-trash] {
+    position: relative;
+    color:black;
+    }
+    
+    *[data-tooltip-trash]::after {
+    content: attr(data-tooltip-trash);
+    
+    position: absolute;
+    top: -185px;
+    right: 85px;
+    width: 150px;
+    
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+    
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    background:white;
+    padding: 2px 2px;
+    border: 1px solid #c0c0c0;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.4);
+    }
+    
+    *[data-tooltip-trash]:hover::after {
+    opacity: 1;
+    }
