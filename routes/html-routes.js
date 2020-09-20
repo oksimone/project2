@@ -1,5 +1,6 @@
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const db = require("../models");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -32,7 +33,12 @@ module.exports = function(app) {
   });
 
   app.get("/watchlist", isAuthenticated, (req, res) => {
-    res.render("watchlist");
+    const userID = req.user.id;
+    db.Movie.findAll({ where: { UserId: userID, onPlaylist: true } }).then(
+      results => {
+        res.render("watchlist", { Movie: results });
+      }
+    );
   });
 
   app.get("/moreInfo", isAuthenticated, (req, res) => {
@@ -44,10 +50,20 @@ module.exports = function(app) {
   });
 
   app.get("/favorites", isAuthenticated, (req, res) => {
-    res.render("favorites");
+    const userID = req.user.id;
+    db.Movie.findAll({ where: { UserId: userID, isFavorite: true } }).then(
+      results => {
+        res.render("favorites", { Movie: results });
+      }
+    );
   });
 
   app.get("/watched", isAuthenticated, (req, res) => {
-    res.render("watched");
+    const userID = req.user.id;
+    db.Movie.findAll({ where: { UserId: userID, hasWatched: true } }).then(
+      results => {
+        res.render("watched", { Movie: results });
+      }
+    );
   });
 };

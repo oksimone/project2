@@ -50,16 +50,19 @@
 <div class="container-fluid mt-5" id="moviemargin">
   <div class="row">
 
+
+    {{#each Movie}}
+
     <div class="col-sm col-lg-4">
       <div id="f1_container">
         <div id="f1_card" class="shadow">
           <div class="front face">
-            <img src="http://image.tmdb.org/t/p/original/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg" width="350px"
+            <img src={{backDrop}} width="350px"
               height="200px" />
           </div>
           <div class="back face center">
-            <p class="watchP"><strong>Mulan</strong></p>
-            <p class="watchP">A girl who cuts her hair to rebel againt the entire country.</p>
+            <p class="watchP"><strong>{{title}}</strong></p>
+            <p class="watchP cardD">{{description}}</p>
             <div class="placement">
               <div data-tooltip-heart="Favorite">
                 <div class="heart"></div>
@@ -73,8 +76,10 @@
           </div>
         </div>
       </div>
-
     </div>
+
+    {{/each}}
+
   </div>
 </div>
 

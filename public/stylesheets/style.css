@@ -302,7 +302,7 @@ form.login {
   transform: none;
 }
 
-/* ========================================================= playlist =========================================================== */
+/* ========================================================= Movie Cards =========================================================== */
 /* the start of like button */
 
 #moviemargin {
@@ -407,56 +407,13 @@ transition: all 0.33s linear;
   margin-top: 10%;
 }
 
-/* .movie:hover { */
-/* background-color: black; */
-/* opacity: 50%; */
-/* width: 100px;
-  height: 100px;
-} */
-
-/* .heart:hover {
-  width: 100px;
-  height: 100px;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-} */
-/* .is-active {
-  transition-duration: 1s;
-  background-position: -2800px 0;
-}
-
-#heartclick {
-  position: absolute;
-}
-
-.movie {
-  position: relative;
-}
-
-.movie:hover .j-heart {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
-    no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-} */
-/* end of like button */
-
 #customize {
   padding-bottom: 20px;
 }
 #curatepage {
   padding-left: 60px;
 }
+
 
 /* ================================================================ moreInfo ================================================================== */
 
@@ -684,10 +641,6 @@ opacity: 1;
       margin-right: auto;
       width: 50%;
     }
-
-
-
-
 
 
     /* ==========================================================loader====================================================== */
