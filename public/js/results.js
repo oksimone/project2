@@ -64,47 +64,47 @@ $(document).ready(() => {
   //click handlers for more info buttons
   $("#info-1").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-1").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-1").data("movie-id");
   });
 
   $("#info-2").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-2").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-2").data("movie-id");
   });
 
   $("#info-3").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-3").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-3").data("movie-id");
   });
 
   $("#info-4").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-4").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-4").data("movie-id");
   });
 
   $("#info-5").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-5").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-5").data("movie-id");
   });
 
   $("#info-6").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-6").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-6").data("movie-id");
   });
 
   $("#info-7").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-7").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-7").data("movie-id");
   });
 
   $("#info-8").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-8").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-8").data("movie-id");
   });
 
   $("#info-9").on("click", event => {
     event.preventDefault();
-    window.location.replace("/moreInfo/" + $("#info-9").data("movie-id"));
+    window.location.href = "/moreInfo/" + $("#info-9").data("movie-id");
   });
 
   //clickhandlers for watchlist buttons
