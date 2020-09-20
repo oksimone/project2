@@ -3,10 +3,13 @@ require("dotenv").config();
 // Requiring necessary npm packages
 const express = require("express");
 const session = require("express-session");
+const Handlebars = require("handlebars");
 const exphbs = require("express-handlebars");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
-
+const {
+  allowInsecurePrototypeAccess
+} = require("@handlebars/allow-prototype-access");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
@@ -19,7 +22,13 @@ app.use(express.static("public"));
 app.use(express.static("assets/photos"));
 
 // Set Handlebars as the default templating engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.engine(
+  "handlebars",
+  exphbs({
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
+    defaultLayout: "main"
+  })
+);
 app.set("view engine", "handlebars");
 
 // We need to use sessions to keep track of our user's login status
@@ -34,7 +43,7 @@ require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",

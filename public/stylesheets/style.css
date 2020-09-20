@@ -302,7 +302,7 @@ form.login {
   transform: none;
 }
 
-/* ========================================================= playlist =========================================================== */
+/* ========================================================= Movie Cards =========================================================== */
 /* the start of like button */
 
 #moviemargin {
@@ -407,56 +407,13 @@ transition: all 0.33s linear;
   margin-top: 10%;
 }
 
-/* .movie:hover { */
-/* background-color: black; */
-/* opacity: 50%; */
-/* width: 100px;
-  height: 100px;
-} */
-
-/* .heart:hover {
-  width: 100px;
-  height: 100px;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-} */
-/* .is-active {
-  transition-duration: 1s;
-  background-position: -2800px 0;
-}
-
-#heartclick {
-  position: absolute;
-}
-
-.movie {
-  position: relative;
-}
-
-.movie:hover .j-heart {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
-    no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-} */
-/* end of like button */
-
 #customize {
   padding-bottom: 20px;
 }
 #curatepage {
   padding-left: 60px;
 }
+
 
 /* ================================================================ moreInfo ================================================================== */
 
@@ -661,7 +618,7 @@ opacity: 1;
 
 
 
-    /* =====================================================title Images============================================== */
+    /* ======================================================title Images============================================================ */
 
 
     .favoritesTitle {
@@ -683,4 +640,59 @@ opacity: 1;
       margin-left: auto;
       margin-right: auto;
       width: 50%;
+    }
+
+
+    /* ==========================================================loader====================================================== */
+
+
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      height:100%;
+    }
+    .loader-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #242f3f;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+    }
+    .loader {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      border: 4px solid rgb(233, 119, 25);
+      animation: loader 2s infinite ease;
+    }
+    .loader-inner {
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: rgb(233, 119, 25);
+      animation: loader-inner 2s infinite ease-in;
+    }
+    
+    @keyframes loader {
+      0% { transform: rotate(0deg);}
+      25% { transform: rotate(180deg);}
+      50% { transform: rotate(180deg);}
+      75% { transform: rotate(360deg);}
+      100% { transform: rotate(360deg);}
+    }
+    
+    @keyframes loader-inner {
+      0% { height: 0%;}
+      25% { height: 0%;}
+      50% { height: 100%;}
+      75% { height: 100%;}
+      100% { height: 0%;}
     }
