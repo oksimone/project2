@@ -68,11 +68,13 @@ module.exports = function(app) {
 
   //route for grabbing most recent search results to display on results page
   app.get("/api/searchresults", (req, res) => {
-    db.Movie.findAll({ limit: 10, order: [["createdAt", "DESC"]] }).then(
-      result => {
-        return res.json(result);
-      }
-    );
+    db.Movie.findAll({
+      where: { UserId: req.user.id },
+      limit: 10,
+      order: [["createdAt", "DESC"]]
+    }).then(result => {
+      return res.json(result);
+    });
   });
 
   //route for more info with a certain movie
