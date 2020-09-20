@@ -57,6 +57,15 @@ module.exports = function(app) {
     });
   });
 
+  //route for finding all playlist movies
+  app.get("/api/watchlist", (req, res) => {
+    db.Movie.findAll({ where: { UserId: req.user.id, onPlaylist: true } }).then(
+      result => {
+        return res.json(result);
+      }
+    );
+  });
+
   //route for updating movielist entries for user
   app.put("/api/moreinfo/:id", (req, res) => {
     db.Movie.update(req.body, {
