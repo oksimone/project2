@@ -133,7 +133,7 @@ form.login {
 }
 
 .resultsTitle span.border {
-  background-color: #111;
+  background-color: transparent;
   padding: 18px;
   font-size: 25px;
   letter-spacing: 10px;
@@ -176,11 +176,13 @@ form.login {
 #menuToggle {
   display: block;
   position: fixed;
+  height: 100%;
   top: 50px;
   left: 50px;
-  z-index: 1;
+  z-index: 2;
   -webkit-user-select: none;
   user-select: none;
+  height:100%;
 }
 
 #menuToggle a {
@@ -274,7 +276,7 @@ form.login {
 #menu {
   position: absolute;
   width: 250px;
-  height: 53em;
+  height: 100%;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;

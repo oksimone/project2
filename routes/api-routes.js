@@ -2,7 +2,6 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const axios = require("axios");
-const movie = require("../models/movie");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -51,14 +50,27 @@ module.exports = function(app) {
     });
   });
 
+  //route for finding all movies user has seen in a search
   app.get("/api/movielist", (req, res) => {
     db.Movie.findAll({ where: { UserId: req.user.id } }).then(result => {
       return res.json(result);
     });
   });
 
+  //route for grabbing most recent search results to display on results page
   app.get("/api/searchresults", (req, res) => {
-    db.Movie.findAll({ limit: 10, order: ["createdAt"] }).then(result => {
+    db.Movie.findAll({ limit: 10, order: [["createdAt", "DESC"]] }).then(
+      result => {
+        return res.json(result);
+      }
+    );
+  });
+
+  //route for more info with a certain movie
+  app.get("/api/moreinfo/:id", (req, res) => {
+    db.Movie.findAll({
+      where: { UserId: req.user.id, id: req.params.id }
+    }).then(result => {
       return res.json(result);
     });
   });
@@ -84,6 +96,7 @@ module.exports = function(app) {
     }
   });
 
+  //route for initializing search query
   app.get("/api/movies/g/:genre", (req, res) => {
     const queryURL =
       "https://api.themoviedb.org/3/discover/movie?api_key=" +

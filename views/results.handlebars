@@ -1,254 +1,305 @@
 <div class="results">
 
-        <nav role="navigation">
-      <div id="menuToggle">
-        <!--
+    <nav role="navigation">
+        <div id="menuToggle">
+            <!--
         A fake / hidden checkbox is used as click reciever,
         so you can use the :checked selector on it.
         -->
-        <input type="checkbox" />
+            <input type="checkbox" />
 
-        <!--
+            <!--
         Some spans to act as a hamburger.
         -->
-        <span></span>
-        <span></span>
-        <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
 
-        <!--
+            <!--
         menu options
         -->
-        <ul id="menu">
-          <a href="./watchlist.handlebars"><li>My Playlist</li></a>
-          <a href="#"><li>Favorites</li></a>
-          <a href="#"><li>Curate Playlist</li></a>
-          <a href="#"><li>Watched</li></a>
-          <a href="#"><li>Logout</li></a>
-        </ul>
-      </div>
+            <ul id="menu">
+                <a href="./watchlist">
+                    <li>My Playlist</li>
+                </a>
+                <a href="./favorites">
+                    <li>Favorites</li>
+                </a>
+                <a href="./curate">
+                    <li>Curate Playlist</li>
+                </a>
+                <a href="./watched">
+                    <li>Watched</li>
+                </a>
+                <a href="./logout">
+                    <li>Logout</li>
+                </a>
+            </ul>
+        </div>
     </nav>
 
-
-<div class="bgimg-1">
-    <div class="resultsTitle">
-        <span class="border">YOUR RESULTS</span>
+ 
+    <div class="bgimg-1"> 
+        <div><p style="font-size: 1px; color: #000000">.</p></div>
+        <h1 class="text-center mt-5" style="background-color: transparent; font-size: 80px; color: #ffffff"> Pandemic Playlist </h1>
+        <div class="resultsTitle">
+            <span class="border">YOUR RESULTS</span>
+        </div>
     </div>
-</div>
 
-<div style="
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-1" style="text-align: center"></h3>
-    <p id="des-1">
-
-    </p>
-</div>
-
-<div class="bgimg-2">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        <h3 class="movieTitle" id="title-1" style="text-align: center"></h3>
+        <p id="des-1">
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-2">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-1" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-1" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-2" style="text-align: center"></h3>
-    <p id="des-2">
-
-    </p>
-</div>
-
-<div class="bgimg-3">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        <h3 class="movieTitle" id="title-2" style="text-align: center"></h3>
+        <p id="des-2" class="text-center pl-5 pr-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quisquam molestias consectetur
+            voluptatibus non vitae dignissimos error repudiandae beatae accusamus in ipsum optio nesciunt distinctio,
+            reiciendis molestiae? Itaque, aliquid adipisci?
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-3">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-2" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-2" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-3" style="text-align: center"></h3>
-    <p id="des-3">
+        <h3 class="movieTitle" id="title-3" style="text-align: center"></h3>
+        <p id="des-3">
 
-    </p>
-</div>
-
-<div class="bgimg-4">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-4">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-3" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-3" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-4" style="text-align: center"></h3>
-    <p id="des-4">
+        <h3 class="movieTitle" id="title-4" style="text-align: center"></h3>
+        <p id="des-4">
 
-    </p>
-</div>
-
-<div class="bgimg-5">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-5">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-4" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-4" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-5" style="text-align: center"></h3>
-    <p id="des-5">
+        <h3 class="movieTitle" id="title-5" style="text-align: center"></h3>
+        <p id="des-5">
 
-    </p>
-</div>
-
-<div class="bgimg-6">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-6">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-5" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-5" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-6" style="text-align: center"></h3>
-    <p id="des-6"></p>
+        <h3 class="movieTitle" id="title-6" style="text-align: center"></h3>
+        <p id="des-6"></p>
 
-    </p>
-</div>
-
-<div class="bgimg-7">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-7">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-6" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-6" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-7" style="text-align: center"></h3>
-    <p id="des-7">
+        <h3 class="movieTitle" id="title-7" style="text-align: center"></h3>
+        <p id="des-7">
 
-    </p>
-</div>
-
-<div class="bgimg-8">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-8">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-7" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-7" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-8" style="text-align: center"></h3>
-    <p id="des-8">
+        <h3 class="movieTitle" id="title-8" style="text-align: center"></h3>
+        <p id="des-8">
 
-    </p>
-</div>
-
-<div class="bgimg-9">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-9">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-8" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-8" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 class="movieTitle" id="title-9" style="text-align: center"></h3>
-    <p id="des-9">
+        <h3 class="movieTitle" id="title-9" style="text-align: center"></h3>
+        <p id="des-9">
 
-    </p>
-</div>
-
-<div class="bgimg-10">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-10">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-9" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-9" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
       color: #ddd;
       background-color: #282e34;
       text-align: center;
       padding: 50px 80px;
       text-align: justify;
     ">
-    <h3 class="movieTitle" id="title-10" style="text-align: center"></h3>
-    <p id="des-10">
-    </p>
-</div>
-
-<div class="bgimg-11">
-    <div class="caption">
-        <span class="border" style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
-            Watchlist!</span>
+        <h3 class="movieTitle" id="title-10" style="text-align: center"></h3>
+        <p id="des-10">
+        </p>
     </div>
-</div>
 
-<div style="
+    <div class="bgimg-11">
+        <div class="caption">
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 wl-10" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">Add to
+                Watchlist!</button>
+            <button class="border btn btn-outline-warning btn-lg p-3 px-4 info-10" type="submit"
+                style="background-color: transparent; font-size: 25px; color: #f7f7f7">More Info!</button>
+
+        </div>
+    </div>
+
+    <div style="
         color: #ddd;
         background-color: #282e34;
         text-align: center;
         padding: 50px 80px;
         text-align: justify;
       ">
-    <h3 style="text-align: center">Want more suggestions?</h3>
-</div>
-
-<div class="bgimg-12">
-    <div class="caption">
-        <span class="border">Add more search filters!</span>
+        <h3 style="text-align: center">Want more suggestions?</h3>
     </div>
-</div>
+
+    <div class="bgimg-12">
+        <div class="caption">
+            <a  href="./curate"><button class="btn btn-outline-warning btn-lg p-3 px-4 info-10" type="submit">Change your search options!</button></a>
+        </div>
+    </div>
 
 </div>
 

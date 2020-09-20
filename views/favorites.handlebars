@@ -1,6 +1,67 @@
+<nav role="navigation">
+    <div id="menuToggle">
+        <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+        <input type="checkbox" />
+
+        <!--
+          Some spans to act as a hamburger.
+          -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+          menu options
+          -->
+        <ul id="menu">
+            <a href="./results">
+                <li>Search Results</li>
+            </a>
+            <a href="./watchlist">
+                <li>My Playlist</li>
+            </a>
+            <a href="./curate">
+                <li>Curate Playlist</li>
+            </a>
+            <a href="./watched">
+                <li>Watched</li>
+            </a>
+            <a href="./logout">
+                <li>Logout</li>
+            </a>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="col-sm">
+        <img class="p1 m-5" src="Pandemic-Playlist-Title-Text.png" alt="logo" style="height: 160px; length: 200px;" />
+    </div>
+</div>
+
+
+
+    <button id="button" aria-describedby="tooltip">My button</button>
+    <div id="tooltip" role="tooltip">
+     add to favorites
+      <div id="arrow" data-popper-arrow></div>
+    </div>
+
+        <button id="button" aria-describedby="tooltip">My button</button>
+    <div id="tooltip" role="tooltip">
+     add Playlist
+      <div id="arrow" data-popper-arrow></div>
+    </div>
+
 
 
 
 
 
 <script type="text/javascript" src="js/favorites.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+
