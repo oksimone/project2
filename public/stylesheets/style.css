@@ -61,52 +61,52 @@ form.login {
 }
 
 .bgimg-2 {
-  background-image: url("https://i.pinimg.com/originals/92/c8/e0/92c8e00b34fcfdeaf605a0647c21adb3.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-3 {
-  background-image: url("https://wegotthiscovered.com/wp-content/uploads/2020/07/Avengers-Endgame-Captain-America.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-4 {
-  background-image: url("http://image.tmdb.org/t/p/original/zzWGRw277MNoCs3zhyG3YmYQsXv.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-5 {
-  background-image: url("http://image.tmdb.org/t/p/original//86L8wqGMDbwURPni2t7FQ0nDjsH.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-6 {
-  background-image: url("http://image.tmdb.org/t/p/original/pq0JSpwyT2URytdFG0euztQPAyR.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-7 {
-  background-image: url("http://image.tmdb.org/t/p/original/dbOqWLNWg1Xphshyus0UMSN8fFP.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-8 {
-  background-image: url("http://image.tmdb.org/t/p/original/qVygtf2vU15L2yKS4Ke44U4oMdD.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-9 {
-  background-image: url("http://image.tmdb.org/t/p/original/gEjNlhZhyHeto6Fy5wWy5Uk3A9D.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-10 {
-  background-image: url("http://image.tmdb.org/t/p/original/7fvdg211A2L0mHddvzyArRuRalp.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
 .bgimg-11 {
-  background-image: url("https://wallpapercave.com/wp/wp1869876.jpg");
+  background-image: url("");
   min-height: 550px;
 }
 
@@ -461,7 +461,7 @@ transition: all 0.33s linear;
 /* ================================================================ moreInfo ================================================================== */
 
 .infoBackdrop {
-  background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
+  background-image: url("");
   position: relative;
   opacity: 0.65;
   background-attachment: fixed;
@@ -469,6 +469,7 @@ transition: all 0.33s linear;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 700px;
+  max-height:1000px;
 }
 
 /* .zoomed {
@@ -655,4 +656,31 @@ opacity: 1;
     
     *[data-tooltip-trash]:hover::after {
     opacity: 1;
+    }
+
+
+
+
+    /* =====================================================title Images============================================== */
+
+
+    .favoritesTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .laylistTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    .watchedTitle {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
