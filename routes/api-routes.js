@@ -66,9 +66,36 @@ module.exports = function(app) {
     );
   });
 
+  //route for finding all favorite movies
+  app.get("/api/favorites", (req, res) => {
+    db.Movie.findAll({ where: { UserId: req.user.id, isFavorite: true } }).then(
+      result => {
+        return res.json(result);
+      }
+    );
+  });
+
+  //route for find all seen movies
+  app.get("/api/watched", (req, res) => {
+    db.Movie.findAll({ where: { UserId: req.user.id, hasWatched: true } }).then(
+      result => {
+        return res.json(result);
+      }
+    );
+  });
+
   //route for updating movielist entries for user
   app.put("/api/moreinfo/:id", (req, res) => {
     db.Movie.update(req.body, {
+      where: { UserId: req.user.id, id: req.params.id }
+    }).then(dbMovie => {
+      res.json(dbMovie);
+    });
+  });
+
+  //route for deleting movielist entries for user
+  app.delete("/api/moreinfo/:id", (req, res) => {
+    db.Movie.destroy({
       where: { UserId: req.user.id, id: req.params.id }
     }).then(dbMovie => {
       res.json(dbMovie);
