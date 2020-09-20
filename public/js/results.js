@@ -62,7 +62,7 @@ $(document).ready(() => {
 
     //clickhandlers for watchlist buttons
     if (!movieList[0].onPlaylist) {
-      $("#wl-1").text("Add to Watchlist!");
+      $("#wl-1").text("Add to Playlist!");
       $("#wl-1").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -84,13 +84,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-1").data("movie-id"),
           data: movieData
         });
-        $("#wl-1").text("Add to Watchlist!");
+        $("#wl-1").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[1].onPlaylist) {
-      $("#wl-2").text("Add to Watchlist!");
+      $("#wl-2").text("Add to Playlist!");
       $("#wl-2").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -112,13 +112,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-2").data("movie-id"),
           data: movieData
         });
-        $("#wl-2").text("Add to Watchlist!");
+        $("#wl-2").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[2].onPlaylist) {
-      $("#wl-3").text("Add to Watchlist!");
+      $("#wl-3").text("Add to Playlist!");
       $("#wl-3").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -140,13 +140,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-3").data("movie-id"),
           data: movieData
         });
-        $("#wl-3").text("Add to Watchlist!");
+        $("#wl-3").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[3].onPlaylist) {
-      $("#wl-4").text("Add to Watchlist!");
+      $("#wl-4").text("Add to Playlist!");
       $("#wl-4").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -168,13 +168,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-4").data("movie-id"),
           data: movieData
         });
-        $("#wl-4").text("Add to Watchlist!");
+        $("#wl-4").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[4].onPlaylist) {
-      $("#wl-5").text("Add to Watchlist!");
+      $("#wl-5").text("Add to Playlist!");
       $("#wl-5").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -196,13 +196,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-5").data("movie-id"),
           data: movieData
         });
-        $("#wl-5").text("Add to Watchlist!");
+        $("#wl-5").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[5].onPlaylist) {
-      $("#wl-6").text("Add to Watchlist!");
+      $("#wl-6").text("Add to Playlist!");
       $("#wl-6").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -224,13 +224,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-6").data("movie-id"),
           data: movieData
         });
-        $("#wl-6").text("Add to Watchlist!");
+        $("#wl-6").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[6].onPlaylist) {
-      $("#wl-7").text("Add to Watchlist!");
+      $("#wl-7").text("Add to Playlist!");
       $("#wl-7").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -252,13 +252,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-7").data("movie-id"),
           data: movieData
         });
-        $("#wl-7").text("Add to Watchlist!");
+        $("#wl-7").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[7].onPlaylist) {
-      $("#wl-8").text("Add to Watchlist!");
+      $("#wl-8").text("Add to Playlist!");
       $("#wl-8").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -280,13 +280,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-8").data("movie-id"),
           data: movieData
         });
-        $("#wl-8").text("Add to Watchlist!");
+        $("#wl-8").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[8].onPlaylist) {
-      $("#wl-9").text("Add to Watchlist!");
+      $("#wl-9").text("Add to Playlist!");
       $("#wl-9").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -308,13 +308,13 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-9").data("movie-id"),
           data: movieData
         });
-        $("#wl-9").text("Add to Watchlist!");
+        $("#wl-9").text("Add to Playlist!");
         window.location.reload();
       });
     }
 
     if (!movieList[9].onPlaylist) {
-      $("#wl-10").text("Add to Watchlist!");
+      $("#wl-10").text("Add to Playlist!");
       $("#wl-10").on("click", event => {
         event.preventDefault();
         const movieData = { onPlaylist: true };
@@ -336,7 +336,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + $("#wl-10").data("movie-id"),
           data: movieData
         });
-        $("#wl-10").text("Add to Watchlist!");
+        $("#wl-10").text("Add to Playlist!");
         window.location.reload();
       });
     }
