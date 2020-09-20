@@ -17,18 +17,34 @@
       <!--
         menu options
         -->
-        <ul id="menu">
-          <a href="./results"><li>Search Results</li></a>
-          <a href="./favorites"><li>Favorites</li></a>
-          <a href="./curate"><li>Curate Playlist</li></a>
-          <a href="./watched"><li>Watched</li></a>
-          <a href="./logout"><li>Logout</li></a>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      <ul id="menu">
+        <a href="./results">
+          <li>Search Results</li>
+        </a>
+        <a href="./favorites">
+          <li>Favorites</li>
+        </a>
+        <a href="./curate">
+          <li>Curate Playlist</li>
+        </a>
+        <a href="./watched">
+          <li>Watched</li>
+        </a>
+        <a href="./logout">
+          <li>Logout</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+</div>
 
-<div class="container-fluid" id="moviemargin">
+<div class="container">
+    <div class="col-sm">
+        <img class="img-fluid" src="Pandemic-Playlist-Title-Text.png" alt="logo" style="max-height: 200px; length: 200px;" />
+    </div>
+</div>
+
+<div class="container-fluid mt-0" id="moviemargin">
   <div class="row">
 
     <div class="col-sm col-lg-4">
@@ -41,10 +57,10 @@
             height="200px"/>
         </div>
         <div class="back face center">
-          <p class = "watchP">Data about the movie goes here</p>
-          <!-- <p class = "watchP">Any content can go here.</p> -->
+          <p class = "watchP"><strong>Mulan</strong></p>
+           <p class = "watchP">A girl who cuts her hair to rebel againt the entire country.</p> 
           <div class="placement">
-            <div data-tooltip-heart=Favorite>
+            <div data-tooltip-heart="Favorite">
             <div class="heart"></div>
             </div>
           </div>
@@ -56,18 +72,19 @@
         </div>
       </div>
     </div>
-    </div>
+
+    {{!-- </div>
 
     <div class="col-sm col-lg-4">
       
     </div>
 
     <div class="col-sm col-lg-4">
-    </div>
+    </div> --}}
 
   </div>
 </div>
-<div class="container-fluid">
+{{!-- <div class="container-fluid">
   <div class="row">
 
     <div class="col-sm col-lg-4">
@@ -81,7 +98,7 @@
     </div>
 
   </div>
-</div>
+</div> --}}
 
 <script type="text/javascript" src="./js/watchlist.js"></script>
 
