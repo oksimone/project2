@@ -452,7 +452,7 @@ transition: all 0.33s linear;
   content: attr(data-tooltip);
 
   position: absolute;
-  top: -185px;
+  top: -210px;
   right: -20px;
   width: 150px;
 
@@ -520,7 +520,7 @@ color:black;
 content: attr(data-tooltip-eye);
 
 position: absolute;
-top: -185px;
+top: -210px;
 right: 85px;
 width: 150px;
 
@@ -555,7 +555,7 @@ opacity: 1;
   content: attr(data-tooltip-add);
   
   position: absolute;
-  top: -185px;
+  top: -210px;
   right: -20px;
   width: 150px;
   
@@ -590,7 +590,7 @@ opacity: 1;
     content: attr(data-tooltip-trash);
     
     position: absolute;
-    top: -185px;
+    top: -210px;
     right: 85px;
     width: 150px;
     
