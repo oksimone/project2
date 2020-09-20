@@ -8,7 +8,6 @@ body {
   color: #fff;
 }
 
-
 /* ======================================================== signup/login page============================================================= */
 
 form.signup,
@@ -124,7 +123,7 @@ form.login {
   text-align: center;
 }
 
-.resultsTitle{
+.resultsTitle {
   position: absolute;
   left: 0;
   top: 50%;
@@ -138,7 +137,6 @@ form.login {
   font-size: 25px;
   letter-spacing: 10px;
 }
-
 
 .caption span.border {
   background-color: #111;
@@ -182,7 +180,7 @@ form.login {
   z-index: 2;
   -webkit-user-select: none;
   user-select: none;
-  height:100%;
+  height: 100%;
 }
 
 #menuToggle a {
@@ -307,19 +305,19 @@ form.login {
 /* ========================================================= playlist =========================================================== */
 /* the start of like button */
 
-#moviemargin{
-  margin-top:10%;
+#moviemargin {
+  margin-top: 10%;
 }
 
 #f1_container {
-position: relative;
-margin: 10px auto;
-width: 350px;
-height: 200px;
-z-index: 1;
+  position: relative;
+  margin: 10px auto;
+  width: 350px;
+  height: 200px;
+  z-index: 1;
 }
 #f1_container {
-perspective: 1000;
+  perspective: 1000;
 }
 #f1_card {
 width: 100%;
@@ -328,47 +326,46 @@ transform-style: preserve-3d;
 transition: all 0.33s linear;
 }
 #f1_container:hover #f1_card {
-transform: rotateY(180deg);
-box-shadow: -5px 5px 5px #aaa;
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
 }
 .face {
-position: absolute;
-width: 100%;
-height: 100%;
-backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
 }
 .face.back {
-display: block;
-transform: rotateY(180deg);
-box-sizing: border-box;
-padding: 10px;
-color: white;
-text-align: center;
-background-color: #282e34
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color: #282e34;
 }
 
 .heart {
-width: 80px;
-height: 80px;
-background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
-no-repeat;
-background-position: 0 0;
-cursor: pointer;
-transition: background-position 1s steps(28);
-transition-duration: 0s;
+  width: 80px;
+  height: 80px;
+  background: url("https://cssanimation.rocks/images/posts/steps/heart.png")
+    no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
 }
 
 .is-active {
-transition-duration: 1s;
-background-position: -2800px 0;
+  transition-duration: 1s;
+  background-position: -2800px 0;
 }
 
-
 .placement {
-position: fixed;
-top: 6%;
-left: 7%;
-transform: translate(-50%, -50%);
+  position: fixed;
+  top: 6%;
+  left: 7%;
+  transform: translate(-50%, -50%);
 }
 
 #minusico{
@@ -389,15 +386,14 @@ transform: translate(-50%, -50%);
  
 }
 
-.watchP{
+.watchP {
   margin-top: 10%;
 }
 
-
 /* .movie:hover { */
-  /* background-color: black; */
-  /* opacity: 50%; */
-  /* width: 100px;
+/* background-color: black; */
+/* opacity: 50%; */
+/* width: 100px;
   height: 100px;
 } */
 
@@ -445,8 +441,7 @@ transform: translate(-50%, -50%);
   padding-left: 60px;
 }
 
-/* ======================================================= moreInfo ================================================================ */
-
+/* ================================================================ moreInfo ================================================================== */
 
 .infoBackdrop {
   background-image: url("https://www.denofgeek.com/wp-content/uploads/2019/02/mcu-1-iron-man.jpg?fit=1200%2C675");
@@ -456,7 +451,7 @@ transform: translate(-50%, -50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 650px;
+  min-height: 700px;
 }
 
 /* .zoomed {
@@ -482,7 +477,7 @@ transform: translate(-50%, -50%);
   content: attr(data-tooltip);
 
   position: absolute;
-  top: -90px;
+  top: -185px;
   right: -20px;
   width: 150px;
 
@@ -550,7 +545,7 @@ color:black;
 content: attr(data-tooltip-eye);
 
 position: absolute;
-top: -100px;
+top: -185px;
 right: 85px;
 width: 150px;
 
