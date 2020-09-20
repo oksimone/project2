@@ -59,6 +59,287 @@ $(document).ready(() => {
     $("#info-8").data("movie-id", movieList[7].id);
     $("#info-9").data("movie-id", movieList[8].id);
     $("#info-10").data("movie-id", movieList[9].id);
+
+    //clickhandlers for watchlist buttons
+    if (!movieList[0].onPlaylist) {
+      $("#wl-1").text("Add to Watchlist!");
+      $("#wl-1").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-1").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-1").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-1").text("Added!");
+      $("#wl-1").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-1").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-1").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[1].onPlaylist) {
+      $("#wl-2").text("Add to Watchlist!");
+      $("#wl-2").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-2").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-2").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-2").text("Added!");
+      $("#wl-2").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-2").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-2").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[2].onPlaylist) {
+      $("#wl-3").text("Add to Watchlist!");
+      $("#wl-3").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-3").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-3").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-3").text("Added!");
+      $("#wl-3").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-3").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-3").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[3].onPlaylist) {
+      $("#wl-4").text("Add to Watchlist!");
+      $("#wl-4").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-4").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-4").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-4").text("Added!");
+      $("#wl-4").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-4").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-4").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[4].onPlaylist) {
+      $("#wl-5").text("Add to Watchlist!");
+      $("#wl-5").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-5").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-5").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-5").text("Added!");
+      $("#wl-5").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-5").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-5").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[5].onPlaylist) {
+      $("#wl-6").text("Add to Watchlist!");
+      $("#wl-6").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-6").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-6").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-6").text("Added!");
+      $("#wl-6").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-6").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-6").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[6].onPlaylist) {
+      $("#wl-7").text("Add to Watchlist!");
+      $("#wl-7").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-7").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-7").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-7").text("Added!");
+      $("#wl-7").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-7").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-7").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[7].onPlaylist) {
+      $("#wl-8").text("Add to Watchlist!");
+      $("#wl-8").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-8").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-8").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-8").text("Added!");
+      $("#wl-8").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-8").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-8").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[8].onPlaylist) {
+      $("#wl-9").text("Add to Watchlist!");
+      $("#wl-9").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-9").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-9").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-9").text("Added!");
+      $("#wl-9").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-9").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-9").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
+
+    if (!movieList[9].onPlaylist) {
+      $("#wl-10").text("Add to Watchlist!");
+      $("#wl-10").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: true };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-10").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-10").text("Added!");
+        window.location.reload();
+      });
+    } else {
+      $("#wl-10").text("Added!");
+      $("#wl-10").on("click", event => {
+        event.preventDefault();
+        const movieData = { onPlaylist: false };
+        $.ajax({
+          method: "PUT",
+          url: "/api/moreinfo/" + $("#wl-10").data("movie-id"),
+          data: movieData
+        });
+        $("#wl-10").text("Add to Watchlist!");
+        window.location.reload();
+      });
+    }
   });
 
   //click handlers for more info buttons
@@ -105,116 +386,5 @@ $(document).ready(() => {
   $("#info-9").on("click", event => {
     event.preventDefault();
     window.location.href = "/moreInfo/" + $("#info-9").data("movie-id");
-  });
-
-  //clickhandlers for watchlist buttons
-  $("#wl-1").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-1").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-1").text("Added!");
-  });
-
-  $("#wl-2").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-2").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-2").text("Added!");
-  });
-
-  $("#wl-3").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-3").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-3").text("Added!");
-  });
-
-  $("#wl-4").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-4").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-4").text("Added!");
-  });
-
-  $("#wl-5").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-5").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-5").text("Added!");
-  });
-
-  $("#wl-6").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-6").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-6").text("Added!");
-  });
-
-  $("#wl-7").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-7").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-7").text("Added!");
-  });
-
-  $("#wl-8").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-8").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-8").text("Added!");
-  });
-
-  $("#wl-9").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-9").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-9").text("Added!");
-  });
-
-  $("#wl-10").on("click", event => {
-    event.preventDefault();
-    const movieData = { onPlaylist: true };
-    $.ajax({
-      method: "PUT",
-      url: "/api/moreinfo/" + $("#wl-10").data("movie-id"),
-      data: movieData
-    });
-    $("#wl-10").text("Added!");
   });
 });
