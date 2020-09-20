@@ -6,11 +6,11 @@ $(document).ready(() => {
     });
   });
 
-  $.get("/api/watched").then(movieList => {
+  $.get("/api/watched").then((movieList) => {
     for (let i = 0; i < movieList.length; i++) {
       const buttonID = movieList[i].id;
       if (!movieList[i].isFavorite) {
-        $(".heartico-" + buttonID).on("click", event => {
+        $(".heartico-" + buttonID).on("click", (event) => {
           event.preventDefault();
           const movieData = { isFavorite: true };
           $.ajax({
@@ -20,7 +20,7 @@ $(document).ready(() => {
           });
         });
       } else {
-        $(".heartico-" + buttonID).on("click", event => {
+        $(".heartico-" + buttonID).on("click", (event) => {
           event.preventDefault();
           const movieData = { isFavorite: false };
           $.ajax({
@@ -31,7 +31,7 @@ $(document).ready(() => {
         });
       }
       if (!movieList[i].onPlaylist) {
-        $(".plusico-" + buttonID).on("click", event => {
+        $(".plusico-" + buttonID).on("click", (event) => {
           event.preventDefault();
           const movieData = { onPlaylist: true };
           $.ajax({
@@ -41,7 +41,7 @@ $(document).ready(() => {
           });
         });
       } else {
-        $(".plusico-" + buttonID).on("click", event => {
+        $(".plusico-" + buttonID).on("click", (event) => {
           event.preventDefault();
           const movieData = { onPlaylist: false };
           $.ajax({
@@ -51,7 +51,7 @@ $(document).ready(() => {
           });
         });
       }
-      $(".trashico-" + buttonID).on("click", event => {
+      $(".trashico-" + buttonID).on("click", (event) => {
         event.preventDefault();
         $.ajax({
           method: "DELETE",
@@ -60,5 +60,19 @@ $(document).ready(() => {
         window.location.href = "/watched";
       });
     }
+  });
+
+  $(".title").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 45);
+    $(this).text(newstr);
+  });
+
+  $(".description").each(function() {
+    const newstr = $(this)
+      .text()
+      .substring(0, 123);
+    $(this).text(newstr);
   });
 });
