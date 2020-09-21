@@ -39,6 +39,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
+          window.location.href = "/watchlist";
         });
       } else {
         $(".eyeico-" + buttonID).on("click", event => {
@@ -49,6 +50,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
+          window.location.href = "/watchlist";
         });
       }
       $(".minusico-" + buttonID).on("click", event => {
@@ -59,7 +61,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.href = "/playlist";
+        window.location.href = "/watchlist";
       });
       $("#" + buttonID).on("click", event => {
         event.preventDefault();
