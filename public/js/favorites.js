@@ -46,7 +46,6 @@ $(document).ready(() => {
       .substring(0, 45);
     $(this).text(newstr);
   });
-
   $(".description").each(function() {
     const newstr = $(this)
       .text()

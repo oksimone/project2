@@ -6,6 +6,8 @@ We're all stuck indoors for the long haul until we take care of the pandemic, it
 
 This application uses [The Movie DB's API](https://developers.themoviedb.org/4/getting-started/authorization) to gather movie data. Passport is used for user authentication. The app utilizes Sequelize with an Express back-end.
 
+To try out the app yourself visit the deployed site on [Heroku!](https://thawing-beyond-59803.herokuapp.com/)
+
 ## Table of Contents
 
 * [Installation](#installation)
