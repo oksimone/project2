@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $(() => {
-    $(".heart").on("click", function(event) {
+    $(".heart").on("click", event => {
       event.stopPropagation();
       $(this).toggleClass("is-active");
     });
@@ -39,6 +39,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
+          window.location.href = "/watchlist";
         });
       } else {
         $(".eyeico-" + buttonID).on("click", event => {
@@ -49,6 +50,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
+          window.location.href = "/watchlist";
         });
       }
       $(".minusico-" + buttonID).on("click", event => {
@@ -59,19 +61,23 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.reload();
+        window.location.href = "/watchlist";
+      });
+      $("#" + buttonID).on("click", event => {
+        event.preventDefault();
+        window.location.href = "/moreInfo/" + buttonID;
       });
     }
   });
 
-  $(".title").each(function() {
+  $(".title").each(() => {
     const newstr = $(this)
       .text()
       .substring(0, 45);
     $(this).text(newstr);
   });
 
-  $(".description").each(function() {
+  $(".description").each(() => {
     const newstr = $(this)
       .text()
       .substring(0, 123);
