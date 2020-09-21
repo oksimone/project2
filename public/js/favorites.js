@@ -37,6 +37,10 @@ $(document).ready(() => {
           window.location.href = "/favorites";
         });
       }
+      $("#" + buttonID).on("click", event => {
+        event.preventDefault();
+        window.location.href = "/moreInfo/" + buttonID;
+      });
     }
   });
 
