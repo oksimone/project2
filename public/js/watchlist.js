@@ -1,32 +1,29 @@
 $(document).ready(() => {
-  $(() => {
-    $(".heart").on("click", event => {
-      event.stopPropagation();
-      $(this).toggleClass("is-active");
-    });
-  });
-
   $.get("/api/watchlist").then(movieList => {
     for (let i = 0; i < movieList.length; i++) {
       const buttonID = movieList[i].id;
       if (!movieList[i].isFavorite) {
         $(".heartico-" + buttonID).on("click", event => {
           event.preventDefault();
+          event.stopPropagation();
+          $(".heartico-" + buttonID).toggleClass("is-active");
           const movieData = { isFavorite: true };
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData
+            data: movieData,
           });
         });
       } else {
         $(".heartico-" + buttonID).on("click", event => {
           event.preventDefault();
+          event.stopPropagation();
+          $(".heartico-" + buttonID).toggleClass("is-active");
           const movieData = { isFavorite: false };
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData
+            data: movieData,
           });
         });
       }
@@ -37,7 +34,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData
+            data: movieData,
           });
           window.location.href = "/watchlist";
         });
@@ -48,7 +45,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData
+            data: movieData,
           });
           window.location.href = "/watchlist";
         });
@@ -59,7 +56,7 @@ $(document).ready(() => {
         $.ajax({
           method: "PUT",
           url: "/api/moreinfo/" + buttonID,
-          data: movieData
+          data: movieData,
         });
         window.location.href = "/watchlist";
       });
@@ -70,14 +67,14 @@ $(document).ready(() => {
     }
   });
 
-  $(".title").each(() => {
+  $(".title").each(function() {
     const newstr = $(this)
       .text()
       .substring(0, 45);
     $(this).text(newstr);
   });
 
-  $(".description").each(() => {
+  $(".description").each(function() {
     const newstr = $(this)
       .text()
       .substring(0, 123);
