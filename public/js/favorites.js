@@ -1,16 +1,11 @@
 $(document).ready(() => {
-  $(() => {
-    $(".heart").on("click", event => {
-      event.stopPropagation();
-      $(this).toggleClass("is-active");
-    });
-  });
-
   $.get("/api/favorites").then(movieList => {
     for (let i = 0; i < movieList.length; i++) {
       const buttonID = movieList[i].id;
       $(".heartico-" + buttonID).on("click", event => {
         event.preventDefault();
+        event.stopPropagation();
+        $(".heartico-" + buttonID).toggleClass("is-active");
         const movieData = { isFavorite: false };
         $.ajax({
           method: "PUT",
