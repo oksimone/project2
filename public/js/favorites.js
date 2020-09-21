@@ -1,6 +1,6 @@
 $(document).ready(() => {
   $(() => {
-    $(".heart").on("click", event => {
+    $(".heart").on("click", function(event) {
       event.stopPropagation();
       $(this).toggleClass("is-active");
     });
@@ -17,7 +17,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.href = "/favorites";
+        window.location.reload();
       });
       if (!movieList[i].onPlaylist) {
         $(".plusico-" + buttonID).on("click", event => {
@@ -28,7 +28,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.href = "/favorites";
+          window.location.reload();
         });
       } else {
         $(".plusico-" + buttonID).on("click", event => {
@@ -39,24 +39,20 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.href = "/favorites";
+          window.location.reload();
         });
       }
-      $("#" + buttonID).on("click", event => {
-        event.preventDefault();
-        window.location.href = "/moreInfo/" + buttonID;
-      });
     }
   });
 
-  $(".title").each(() => {
+  $(".title").each(function() {
     const newstr = $(this)
       .text()
       .substring(0, 45);
     $(this).text(newstr);
   });
 
-  $(".description").each(() => {
+  $(".description").each(function() {
     const newstr = $(this)
       .text()
       .substring(0, 123);
