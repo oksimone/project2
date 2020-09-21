@@ -12,7 +12,7 @@ $(document).ready(() => {
     console.log(genreInput);
     console.log(typeInput);
     if (ageInput >= 18) {
-      ageFilter = "&include_adult=true";
+      ageFilter = "&include_adult=false";
     } else {
       ageFilter = "&include_adult=false";
     }
