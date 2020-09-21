@@ -12,7 +12,7 @@ $(document).ready(() => {
           url: "/api/moreinfo/" + buttonID,
           data: movieData
         });
-        window.location.reload();
+        window.location.href = "/favorites";
       });
       if (!movieList[i].onPlaylist) {
         $(".plusico-" + buttonID).on("click", event => {
@@ -23,7 +23,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.reload();
+          window.location.href = "/favorites";
         });
       } else {
         $(".plusico-" + buttonID).on("click", event => {
@@ -34,7 +34,7 @@ $(document).ready(() => {
             url: "/api/moreinfo/" + buttonID,
             data: movieData
           });
-          window.location.reload();
+          window.location.href = "/favorites";
         });
       }
     }

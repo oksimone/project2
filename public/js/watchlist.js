@@ -11,7 +11,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData,
+            data: movieData
           });
         });
       } else {
@@ -23,7 +23,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData,
+            data: movieData
           });
         });
       }
@@ -34,7 +34,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData,
+            data: movieData
           });
         });
       } else {
@@ -44,7 +44,7 @@ $(document).ready(() => {
           $.ajax({
             method: "PUT",
             url: "/api/moreinfo/" + buttonID,
-            data: movieData,
+            data: movieData
           });
         });
       }
@@ -54,7 +54,7 @@ $(document).ready(() => {
         $.ajax({
           method: "PUT",
           url: "/api/moreinfo/" + buttonID,
-          data: movieData,
+          data: movieData
         });
         window.location.href = "/playlist";
       });
